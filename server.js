@@ -15,7 +15,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/certificates', async (req, res) => {
-  const certificate = await Cert.find({})
+  const certificate = await Cert.find()
   res.json(certificate)
 })
 
