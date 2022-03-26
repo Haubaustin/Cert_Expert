@@ -1,0 +1,75 @@
+[
+{
+"name": "Systems Security Certified Practitioner (SSCP)",
+"organization": "ISC",
+"examPrice": "249",
+"description": "SSCP certification demonstrates you have the advanced technical skills and knowledge to implement, monitor and administer IT infrastructure using security best practices, policies and procedures established by the cybersecurity experts at (ISC)².",
+"image": "https://www.isc2.org/-/media/ISC2/ISC2-Icons/0-current-square-cert-logos/SSCP---Square.ashx?h=131&w=131&la=en&hash=D498B7F3A25C64859B1AA9A4EC1BF1A67AD1BD8F",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Certified Information Systems Security Professional (CISSP)",
+"organization": "ISC",
+"examPrice": "699",
+"description": "Earning the CISSP proves you have what it takes to effectively design, implement and manage a best-in-class cybersecurity program. With a CISSP, you validate your expertise and become an (ISC)² member, unlocking a broad array of exclusive resources, educational tools, and peer-to-peer networking opportunities.",
+"image": "https://www.isc2.org/-/media/ISC2/ISC2-Icons/0-current-square-cert-logos/CISSP---Square.ashx?h=131&w=131&hash=111F457FD3717A6A000D8C00FDDBC0BCD3DF52EF&la=en",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Certified Cloud Security Professional (CCSP)",
+"organization": "ISC",
+"examPrice": "599",
+"description": "The CCSP shows you have the advanced technical skills and knowledge to design, manage and secure data, applications and infrastructure in the cloud using best practices, policies and procedures established by the cybersecurity experts at (ISC)².",
+"image": "https://www.isc2.org/-/media/ISC2/ISC2-Icons/0-current-square-cert-logos/CCSP---Square.ashx?h=132&w=132&hash=18DAD7BB4C48BE7928A4CE8BB9D648B701907289&la=en",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Certified Secure Software Lifecycle Professional (CSSLP)",
+"organization": "ISC",
+"examPrice": "599",
+"description": "CSSLP certification recognizes leading application security skills. It shows employers and peers you have the advanced technical skills and knowledge necessary for authentication, authorization and auditing throughout the SDLC using best practices, policies and procedures established by the cybersecurity experts at (ISC)².",
+"image": "https://www.isc2.org/-/media/ISC2/ISC2-Icons/0-current-square-cert-logos/CSSLP---Square.ashx?h=132&w=132&hash=A1BFC51F44D6DCD436D919C137EE7DF4754C3D43&la=en",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+}
+
+]

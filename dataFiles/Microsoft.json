@@ -1,0 +1,237 @@
+[
+{
+"name": "Azure Solutions Expert",
+"organization": "Microsoft",
+"examPrice": "165+165",
+"description": "Azure solution architects have subject matter expertise in designing cloud and hybrid solutions that run on Microsoft Azure, including compute, network, storage, monitor, and security.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Azure Developer Associate",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "Azure developers design, build, test, and maintain cloud applications and services.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "365 Developer Associate",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "Microsoft 365 developers design, build, test, and maintain applications and solutions that are optimized for the productivity and collaboration needs of organizations using the Microsoft 365 platform.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Azure Cosmos DB Developer Specialty",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "Azure Cosmos DB developers design and implement data models and data distribution, load data into an Azure Cosmos DB database, and optimize and maintain the solution.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-specialty-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Azure Administrator Associate",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "Azure administrators implement, manage, and monitor an organizations Microsoft Azure environment.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Azure Data Engineer Associate",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "Azure data engineers integrate, transform, and consolidate data from various structured and unstructured data systems into structures that are suitable for building analytics solutions.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Azure Data Scientist Associate",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "The Azure data scientist applies their knowledge of data science and machine learning to implement and run machine learning workloads on Azure; in particular, using Azure Machine Learning Service.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "DevOps Engineer Expert",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "DevOps engineers design and implement strategies for collaboration, code, infrastructure, source control, security, compliance, continuous integration, testing, delivery, monitoring, and feedback.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Azure AI Engineer Associate",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "Azure AI engineers build, manage, and deploy AI solutions that leverage Azure Cognitive Services and Azure Applied AI services.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Azure Security Engineer Associate",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "Azure security engineers implement Azure security controls that protect identity, access, data, applications, and networks in cloud and hybrid environments as part of an end-to-end infrastructure.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Security Operations Analyst Associate",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "The Microsoft security operations analyst collaborates with organizational stakeholders to secure information technology systems for the organization. Their goal is to reduce organizational risk by rapidly remediating active attacks in the environment, advising on improvements to threat protection practices, and referring violations of organizational policies to appropriate stakeholder",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Identity and Access Administrator Associate",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "The Microsoft identity and access administrator designs, implements, and operates an organization’s identity and access management systems by using Azure AD. They manage tasks such as providing secure authentication and authorization access to enterprise applications.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-associate-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "365 Enterprise Administrator Expert",
+"organization": "Microsoft",
+"examPrice": "165",
+"description": "Microsoft 365 enterprise administrators evaluate, plan, migrate, deploy, and manage Microsoft 365 services.",
+"image": "https://docs.microsoft.com/en-us/media/learn/certification/badges/microsoft-certified-expert-badge.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+}
+
+]

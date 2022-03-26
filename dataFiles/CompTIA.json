@@ -1,0 +1,253 @@
+[{
+"name": "IT Fundamentals",
+"organization": "CompTIA",
+"examPrice": "130",
+"description": "IT Fundamentals (ITF+) covers a range of IT topics and provides a solid grounding in the technology concepts and practices organizations use today.",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logoitfundamentals.svg?sfvrsn=ce3ee1ff_2",
+"learningresources": "",
+"difficulty": "",
+"field": {
+    "cybersecurity": "",
+    "softwaredev": "",
+    "itsupport": "",
+    "cloudcomputing": "",
+    "datamanagement": "",
+    "network": "",
+    "projectmanagement": ""
+    }
+    },
+{
+"name": "A+",
+"organization": "CompTIA",
+"examPrice": "239",
+"description": "A+ is the starting point for a career in IT. The performance-based exams certify foundational IT skills across a variety of devices and operating systems.",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logoaplus.svg?sfvrsn=5ee1de19_2",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Network+",
+"organization": "CompTIA",
+"examPrice": "348",
+"description": "Network+ certifies the essential skills needed to confidently design, configure, manage and troubleshoot any wired and wireless devices",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logonetworkplus.svg?sfvrsn=1ca21668_2",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Security+",
+"organization": "CompTIA",
+"examPrice": "381",
+"description": "Security+ provides a global benchmark for best practices in IT network and operational security, one of the fastest-growing fields in IT.",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logosecurityplus.svg?sfvrsn=1ca21668_2",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Cloud+",
+"organization": "CompTIA",
+"examPrice": "348",
+"description": "Cloud+ validates the skills and expertise required to securely implement, maintain and utilize cloud technologies.",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logocloudplus.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Linux+",
+"organization": "CompTIA",
+"examPrice": "348",
+"description": "Linux+ is an internationally recognized credential validating technical competencies required for junior-level Linux administrators",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logolinuxplus.svg?sfvrsn=a1b030a_2",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Server+",
+"organization": "CompTIA",
+"examPrice": "348",
+"description": "Server+ demonstrates the technical knowledge and skills required to perform a variety of tasks on server platforms.",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logoserverplus.svg?sfvrsn=2cf52c4_2",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "CySA+",
+"organization": "CompTIA",
+"examPrice": "381",
+"description": "Cybersecurity Analyst (CySA+) applies behavioral analytics to the IT security field to improve the overall state of IT security.",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logocysaplus-01.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "CASP+",
+"organization": "CompTIA",
+"examPrice": "480",
+"description": "CASP+ is an advanced certification that validates critical thinking and judgment across a spectrum of security disciplines in complex environments",
+"image": "https://comptiacdn.azureedge.net/webcontent/images/default-source/siteicons/logocasp_181cc6b4-05ec-4ddd-be1d-728ec7499b30.svg?sfvrsn=50eaf2dd_6",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "PenTest+",
+"organization": "CompTIA",
+"examPrice": "381",
+"description": "CompTIA PenTest+ is for intermediate level cybersecurity professionals who are tasked with penetration testing to manage vulnerabilities on a network.",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logopentestplus.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Data+",
+"organization": "CompTIA",
+"examPrice": "381",
+"description": "CompTIA Data+ is an early-career data analytics certification that gives you the confidence to bring data analysis to life and make data-driven business decisions.",
+"image": "https://comptiacdn.azureedge.net/webcontent/images/default-source/siteicons/logodataplus.svg?sfvrsn=c1041be7_2",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Project+",
+"organization": "CompTIA",
+"examPrice": "348",
+"description": "Project+ validates the ability to initiate, manage and complete a project or business initiative on time and within budget.",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logoprojectplus.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "CTT+",
+"organization": "CompTIA",
+"examPrice": "371",
+"description": "CTT+ validates the knowledge and use of tools and techniques necessary for successfully teaching in todays learning environments.",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logocttplus.svg",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+},
+{
+"name": "Cloud Essentials+",
+"organization": "CompTIA",
+"examPrice": "130",
+"description": "Cloud Essentials+ demonstrates that both IT and non-technical professionals have the essential business acumen required to make informed cloud service decisions and recommendations",
+"image": "https://comptiawebsite.blob.core.windows.net/webcontent/images/default-source/siteicons/logocloudessentials.svg?sfvrsn=94b4ae64_2",
+"learningresources": "",
+"difficulty": "",
+"field": {
+"cybersecurity": "",
+"softwaredev": "",
+"itsupport": "",
+"cloudcomputing": "",
+"datamanagement": "",
+"network": "",
+"projectmanagement": ""
+}
+}
+]

@@ -1,0 +1,205 @@
+[
+    {
+    "name": "Cloud Practioner",
+    "organization": "AWS",
+    "examPrice": "100",
+    "description": "This certification validates cloud fluency and foundational AWS knowledge.",
+    "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Cloud-Practitioner_badge_512x512.ccd8e6f505d7d0bfb64620a723bcef5fda10d580.png",
+    "learningresources": "",
+    "difficulty": "",
+    "field": {
+        "cybersecurity": "",
+        "softwaredev": "",
+        "itsupport": "",
+        "cloudcomputing": "",
+        "datamanagement": "",
+        "network": "",
+        "projectmanagement": ""
+        }
+    },
+
+    {
+        "name": "Developer",
+        "organization": "AWS",
+        "examPrice": "150",
+        "description": "This certification validates the ability to write and deploy cloud-based applications.",
+        "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Developer_Associate_badge_512x512.616df8fd6c6a4298d013b7787e0bbbf93f9e2760.png",
+        "learningresources": "",
+        "difficulty": "",
+        "field": {
+            "cybersecurity": "",
+            "softwaredev": "",
+            "itsupport": "",
+            "cloudcomputing": "",
+            "datamanagement": "",
+            "network": "",
+            "projectmanagement": ""
+            }
+    },
+
+    {
+        "name": "Solutions Architect Associate",
+        "organization": "AWS",
+        "examPrice": "150",
+        "description": "This certification validates the ability to design and implement distributed systems on AWS.",
+        "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Solutions-Architect_Associate_badge_512x512.139edbefd4d7e9a16213032f592bdd8ca769dced.png",
+        "learningresources": "",
+    "difficulty": "",
+        "field": {
+            "cybersecurity": "",
+            "softwaredev": "",
+            "itsupport": "",
+            "cloudcomputing": "",
+            "datamanagement": "",
+            "network": "",
+            "projectmanagement": ""
+            }    
+    },
+
+        {
+            "name": "SysOps Administrator",
+            "organization": "AWS",
+            "examPrice": "150",
+            "description": "This certification validates the ability to deploy, manage, and operate workloads on AWS.",
+            "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Sysops-Administrator_Associate__badge_512x512.33561cb5428dd0dad607f140b11a19bd30ab5e1a.png",
+            "learningresources": "",
+    "difficulty": "",
+            "field": {
+                "cybersecurity": "",
+                "softwaredev": "",
+                "itsupport": "",
+                "cloudcomputing": "",
+                "datamanagement": "",
+                "network": "",
+                "projectmanagement": ""
+                }
+            },
+            {
+                "name": "DevOps Engineer",
+                "organization": "AWS",
+                "examPrice": "300",
+                "description": "This certification validates the ability to automate the testing and deployment of AWS infrastructure and applications.",
+                "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Devops-Engineer_Professional_badge_512x512.ae0626c6bc4c9cfcfe910ab418e8a5481bdcc3e1.png",
+                "learningresources": "",
+                "difficulty": "",
+                "field": {
+                    "cybersecurity": "",
+                    "softwaredev": "",
+                    "itsupport": "",
+                    "cloudcomputing": "",
+                    "datamanagement": "",
+                    "network": "",
+                    "projectmanagement": ""
+                    }
+                },
+                {
+                    "name": "Solution Architect Professional",
+                    "organization": "AWS",
+                    "examPrice": "300",
+                    "description": "This certification validates the ability to design, deploy, and evaluate applications on AWS within diverse, complex requirements.",
+                    "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_%20Certified_Solutions-Architect_Professional_badge_512x512.ab5b14ee31132a77715a338f6d6c0b43eefdc8a6.png",
+                    "learningresources": "",
+                    "difficulty": "",
+                    "field": {
+                        "cybersecurity": "",
+                        "softwaredev": "",
+                        "itsupport": "",
+                        "cloudcomputing": "",
+                        "datamanagement": "",
+                        "network": "",
+                        "projectmanagement": ""
+                        }
+                    },
+                    {
+                        "name": "Advanced Networking",
+                        "organization": "AWS",
+                        "examPrice": "300",
+                        "description": "This certification validates expertise in designing and maintaining network architecture for the breadth of AWS services.",
+                        "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Advanced-Networking_Specialty_badge_512x512.ac4b81f689c2dd6c7a8dc9599ff49a050682089e.png",
+                        "learningresources": "",
+                        "difficulty": "",
+                        "field": {
+                            "cybersecurity": "",
+                            "softwaredev": "",
+                            "itsupport": "",
+                            "cloudcomputing": "",
+                            "datamanagement": "",
+                            "network": "",
+                            "projectmanagement": ""
+                            }
+                        },
+                        {
+                            "name": "Data Analysis",
+                            "organization": "AWS",
+                            "examPrice": "300",
+                            "description": "This certification validates expertise in using AWS data lakes and analytics services to get insights from data.",
+                            "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Data_Analytics_Specialty_badge_512x512.1ac7ce0a18ced455f146b8133a3d5374c98f23c7.png",
+                            "learningresources": "",
+                            "difficulty": "",
+                            "field": {
+                                "cybersecurity": "",
+                                "softwaredev": "",
+                                "itsupport": "",
+                                "cloudcomputing": "",
+                                "datamanagement": "",
+                                "network": "",
+                                "projectmanagement": ""
+                                }
+                            },
+                            {
+                                "name": "Database",
+                                "organization": "AWS",
+                                "examPrice": "300",
+                                "description": "This certification validates expertise in recommending, designing, and maintaining optimal AWS database solutions.",
+                                "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Database_Specialty_badge_512x512.026086365e38f26f96087a467f8592369b0f1041.png",
+                                "learningresources": "",
+                                "difficulty": "",  
+                                "field": {
+                                    "cybersecurity": "",
+                                    "softwaredev": "",
+                                    "itsupport": "",
+                                    "cloudcomputing": "",
+                                    "datamanagement": "",
+                                    "network": "",
+                                    "projectmanagement": ""
+                                    }
+                                },
+                                {
+                                    "name": "Machine Learning",
+                                    "organization": "AWS",
+                                    "examPrice": "300",
+                                    "description": "This certification validates expertise in building, training, tuning, and deploying machine learning models on AWS",
+                                    "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Machine_Learning_Specialty_badge_512x512.faab741792f1b5195d2dfbf8ae5abd0d9024af7e.png",
+                                    "learningresources": "",
+                                    "difficulty": "",  
+                                    "field": {
+                                        "cybersecurity": "",
+                                        "softwaredev": "",
+                                        "itsupport": "",
+                                        "cloudcomputing": "",
+                                        "datamanagement": "",
+                                        "network": "",
+                                        "projectmanagement": ""
+                                        }
+                                    },
+                                    {
+                                        "name": "Security",
+                                        "organization": "AWS",
+                                        "examPrice": "300",
+                                        "description": "This certification validates expertise in securing data and workloads in the AWS Cloud.",
+                                        "image": "https://d1.awsstatic.com/training-and-certification/Certification%20Badges/AWS-Certified_Security_Specialty_badge_512x512.d02d4830322517ad8d0823ddf0b9b7182b2b7172.png",
+                                        "learningresources": "",
+                                        "difficulty": "",  
+                                        "field": {
+                                            "cybersecurity": "",
+                                            "softwaredev": "",
+                                            "itsupport": "",
+                                            "cloudcomputing": "",
+                                            "datamanagement": "",
+                                            "network": "",
+                                            "projectmanagement": ""
+                                            }
+                                        }
+
+
+]
