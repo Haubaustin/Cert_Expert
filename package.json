@@ -1,0 +1,26 @@
+{
+  "name": "cert_expert",
+  "version": "1.0.0",
+  "description": "---\r ![Cert](https://images.click.in/classifieds/images/72/10_10_2015_13_31_46_c9qdr4u7iafm2d4v359qqaqr56_7jhq3ia5ms.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haubaustin/Cert_Expert.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haubaustin/Cert_Expert/issues"
+  },
+  "homepage": "https://github.com/Haubaustin/Cert_Expert#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.8",
+    "nodemon": "^2.0.15"
+  }
+}
