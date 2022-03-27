@@ -1,13 +1,15 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 
 
 const Nav = () => {
     return (
         <div className='Nav'>
-            {/* <Link to="/">Home</Link>
-            <Link to="/about">About</Link> */}
+            <section className='navLinks'>
+            <Link to="/" className='homeLink'>Home</Link>
+            <Link to="/search" className='searchLink'>Search</Link>
+            </section>
             <span className='title'>
                 Cert Expert
             </span>
