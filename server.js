@@ -9,6 +9,7 @@ const app = express()
 
 app.use(cors())
 app.use(express.json())
+app.use(express.static(`${__dirname}/client/build`))
 
 app.get('/', (req, res) => {
   res.send('This is root!')
@@ -19,6 +20,9 @@ app.get('/certificates', async (req, res) => {
   res.json(certificate)
 })
 
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
+ })
 app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
 })
