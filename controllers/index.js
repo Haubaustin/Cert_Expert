@@ -10,6 +10,26 @@ const getAllCert = async (req, res) => {
     }
 }
 
+const getByOrg = async (req, res) => {
+    try {
+        const organization = await Cert.find({ organization: req.params.organization})
+        return res.status(200).json({ organization })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
+const getLikeName = async (req, res) => {
+    try {
+    const name = await Cert.find({'name': {'$regex': `${req.params.name}`, '$options': 'i'}}) 
+        return res.status(200).json({ name })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 module.exports = {
-    getAllCert
+    getAllCert,
+    getByOrg,
+    getLikeName
 }

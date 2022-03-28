@@ -66,7 +66,33 @@ a.searchLink:hover  {
 }
 
 body {
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+}
+
+.Certificate {
+  background-color: aliceblue;
+  width: 270px;
+  min-height: 1em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 15px;
+  border: 2px solid black;
+  border-radius: 25px;
+  box-shadow: 0 0 4px black;
+  padding-left: 5px;
+  padding-right: 5px;
+  text-decoration: none;
+}
+
+.Certificate > h4 {
+  margin-top: 5px;
+}
+
+.Certificate > img {
+  height: 100px;
+  width: 100px;
+  margin-top: 15px;
 }
 
 .Footer {
@@ -95,6 +121,13 @@ body {
   width: 400px;
   min-height: 350px;
   background-color: aliceblue;
+}
+
+.how > h3 > span {
+  color: rgb(0, 174, 255);
+  font-weight: 1000;
+  text-shadow: 0 0 1px black;
+  font-size: 22px;
 }
 
 .Main {
@@ -126,10 +159,15 @@ body {
   margin-bottom: 20px;
 }
 
+.results > a {
+  text-decoration: none;
+  color: black;
+}
+
 .navLinks {
   font-size: 30px;
   position: absolute;
-  font-family: 'Dela Gothic One', cursive;
+  font-family: 'Anton', sans-serif;
   left: 10px;
   top: 60px;
 }
@@ -151,10 +189,10 @@ body {
 .title {
   font-size: 40px;
   position: absolute;
-  font-family: 'Dela Gothic One', cursive;
+  font-family: 'Anton', sans-serif;
   right: 10px;
   color: rgb(0, 174, 255);
-  text-shadow: 0 0 5px black;
+  text-shadow: 0 0 6px black;
 }
 
 .why > p, .how > p {
@@ -168,4 +206,11 @@ body {
   text-shadow: 0 0 .5px black;
   font-size: 18px;
 
+}
+
+.why > h3 > span {
+  color: rgb(0, 174, 255);
+  font-weight: 1000;
+  text-shadow: 0 0 1px rgb(0, 0, 0);
+  font-size: 22px;
 }

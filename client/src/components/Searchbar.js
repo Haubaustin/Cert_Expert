@@ -10,9 +10,9 @@ const Searchbar = (props) => {
             type={"text"} 
             placeholder="Name of Certificate" 
             value={props.value}
-            onChange={props.onChange1}
+            onChange={props.onChange}
             />
-            <button type="submit">Search</button>
+            <button type="submit" disabled={!props.value}>Search</button>
             </form>
         </div>
     )

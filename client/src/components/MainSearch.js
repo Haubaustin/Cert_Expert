@@ -2,66 +2,72 @@ import React, { useState } from "react";
 import Searchbar from "./Searchbar";
 import axios from "axios"
 import Dropdown from "./Dropdown";
-import { use } from "express/lib/application";
-import { query } from "express";
+import Certificate from "./Certificate";
+import { Link } from "react-router-dom";
+import Certificatedetails from "./Certificatedetails";
+
 
 const MainSearch = () => {
-    const [searchName, setSearchName] = useState([])
+    let [searchName, setSearchName] = useState([])
     const [nameResults, setNameResults] = useState([])
-    const [searchOrg, setOrgName] = useState('')
-    const [orgResults, setOrgResults] = useState('')
+    const [orgName, setOrgName] = useState([])
+    const [searchBy, setSearchBy] = useState(true)
 
-    const handleOrgChange = (e) => {
-        setOrgName(e.target.value)
-        console.log(e.target.value)
-    }
 
     const handleNameChange = (e) => {
         setSearchName(e.target.value)
-        console.log(e.target.value)
-        queryByOrg()
     }
 
-    const queryByName = async (e) => {
+    const findByName = async (e) => {
+        setSearchBy(true)
         e.preventDefault()
         const name = await axios.get(`http://localhost:3001/api/name/${searchName}`)
-        setNameResults(name.data)
-        console.log(name)
-        console.log(searchName)
+        setNameResults(name.data.name)
     }
 
-    const queryByOrg = async (e) => {
-        const org = await axios.get(`http://localhost:3001/api/${searchOrg}`)
-        console.log(org.data)
-
+    const findByOrg = async (e) => {
+        setSearchBy(false)
+        if (e.target.value === "") {
+            return }
+            else {
+        const org = await axios.get(`http://localhost:3001/api/${e.target.value}`)
+        setOrgName(org.data.organization)
     }
-
-
+}
+    
     return (
         <div className="Main">
             <div className="search">
                 <h3>Search</h3>
                 <div className="searchFilters">
-                    By Name
+                    <h5>By Name</h5>
                     <Searchbar 
                         onChange={handleNameChange}
-                        onSubmit={queryByName}
+                        onSubmit={findByName}
+                        value={searchName}
                         />
-                        By Organization<br></br>
+                        <h5>By Organization</h5><br></br>
                     <Dropdown
                         options={[
-                            {label: "All", value: ""},
+                            {label: "Null", value: ""},
                             {label: 'AWS', value: "AWS"},
                             {label: 'Microsoft', value: "Microsoft"},
                             {label: 'CompTIA', value: "CompTIA"},
                             {label: 'ISC', value: "ISC"},
                         ]}
-                        onChange={handleOrgChange}
+                        onChange={findByOrg}
                         />
                 </div>
             </div>
             <div className="results">
-                
+                {!searchBy && orgName.map((org) => (
+                    <Link to={`${org.name}`} >
+                    <Certificate key={org._id} name={org.name} desc={org.description} img={org.image} />
+                    </Link>
+                ))}
+                {searchBy && nameResults.map((name) => (
+                    <Certificate key={name._id} name={name.name} desc={name.description} img={name.image} />
+                ))}
             </div>
         </div>
     )
