@@ -15,7 +15,7 @@ function App() {
     <div className='appMain'>
       <Routes>
         <Route path='/' element={<Main />} />
-        <Route path='Search' element={<SearchPage />} />
+        <Route path='search' element={<SearchPage />} />
       </Routes>
     </div>
       <Footer />
