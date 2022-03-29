@@ -26,11 +26,18 @@ useEffect(()=> {
                 </div>
                 <div className="crRight">
                 <p>Difficulty: {cert.difficulty}</p>
-                <p>Learning Resources: {cert.learningresources}</p>
-                <p>cloudcomputing {cert.field.cloudcomputing}</p>
                 
+                {/* <p>cloudcomputing {cert.field.cloudcomputing}</p> */}
+                 </div>
+            </div>
+            <h2 className="Title">Study Resources</h2>
+            <div className="study">
+                Learning Resources: {cert.learningresources}
 
-                </div>
+            </div>
+            <h2 className="Title">Comments</h2>
+            <div className="comment">
+                
             </div>
         </div>
     )
