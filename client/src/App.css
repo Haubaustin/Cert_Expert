@@ -134,6 +134,7 @@ body {
   background-color: aliceblue;
   border: 3px solid black;
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .crLeft {
@@ -146,11 +147,17 @@ body {
 }
 
 .crLeft > img {
-  height: 150px;
+  height: 200px;
 }
 
 .crRight {
   border-bottom-right-radius: 25px;
+  text-align: left;
+}
+
+.crRight > p {
+  margin-left: 15px;
+  margin-right: 15px;
 }
 
 .Footer {
