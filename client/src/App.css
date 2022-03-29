@@ -70,6 +70,24 @@ body {
   font-weight: 600;
 }
 
+.certDet {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.certResult {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.certTitle {
+  background-color: black;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  color: white;
+  margin-bottom: 0px;
+}
+
 .Certificate {
   background-color: aliceblue;
   width: 270px;
@@ -93,6 +111,29 @@ body {
   height: 100px;
   width: 100px;
   margin-top: 15px;
+}
+
+.crLeft, .crRight {
+  background-color: aliceblue;
+  border: 3px solid black;
+  padding-top: 15px;
+}
+
+.crLeft {
+  border-bottom-left-radius: 25px;
+}
+
+.crLeft > p {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.crLeft > img {
+  height: 150px;
+}
+
+.crRight {
+  border-bottom-right-radius: 25px;
 }
 
 .Footer {

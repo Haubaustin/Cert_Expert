@@ -4,5 +4,5 @@ const certSchema = require('./certification')
 const Cert = mongoose.model('certifications', certSchema)
 
 module.exports = {
-    Cert
+    Cert,
 }

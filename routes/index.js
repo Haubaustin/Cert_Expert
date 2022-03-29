@@ -6,6 +6,7 @@ const router = Router()
 router.get('/all', controllers.getAllCert)
 router.get('/:organization', controllers.getByOrg )
 router.get('/name/:name', controllers.getLikeName)
+router.get('/id/:_id', controllers.getId)
 
 
 module.exports=router

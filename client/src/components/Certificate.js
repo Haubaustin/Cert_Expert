@@ -6,7 +6,7 @@ const Certificate = (props) => {
     return (
         <div className="Certificate">
             <img src={props.img} alt=''/>
-            <Link to={props.name}>
+            <Link to={props.id}>
             <h4>{props.name}</h4>
             </Link>
             <p>{props.desc}</p>

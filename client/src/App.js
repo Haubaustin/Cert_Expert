@@ -17,7 +17,7 @@ function App() {
        <Routes>
          <Route path='/' element={<Main />} />
          <Route path='search' element={<SearchPage />} />
-         <Route path='search/:name' element={<Certificatedetails />} />
+         <Route path='search/:id' element={<Certificatedetails />} />
        </Routes>
      </div>
        <Footer />

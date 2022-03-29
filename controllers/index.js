@@ -28,8 +28,18 @@ const getLikeName = async (req, res) => {
     }
 }
 
+const getId = async (req, res) => {
+    try {
+    const id = await Cert.find({ _id: req.params._id }) 
+        return res.status(200).json({ id })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 module.exports = {
     getAllCert,
     getByOrg,
-    getLikeName
+    getLikeName,
+    getId
 }

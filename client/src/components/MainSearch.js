@@ -4,7 +4,6 @@ import axios from "axios"
 import Dropdown from "./Dropdown";
 import Certificate from "./Certificate";
 import { Link } from "react-router-dom";
-import Certificatedetails from "./Certificatedetails";
 
 
 const MainSearch = () => {
@@ -61,12 +60,10 @@ const MainSearch = () => {
             </div>
             <div className="results">
                 {!searchBy && orgName.map((org) => (
-                    <Link to={`${org.name}`} >
-                    <Certificate key={org._id} name={org.name} desc={org.description} img={org.image} />
-                    </Link>
+                    <Certificate key={org._id} id={org._id} name={org.name} desc={org.description} img={org.image} />
                 ))}
                 {searchBy && nameResults.map((name) => (
-                    <Certificate key={name._id} name={name.name} desc={name.description} img={name.image} />
+                    <Certificate key={name._id} id={name._id} name={name.name} desc={name.description} img={name.image} />
                 ))}
             </div>
         </div>
