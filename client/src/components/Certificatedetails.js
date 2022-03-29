@@ -15,6 +15,15 @@ useEffect(()=> {
     getCertResults()
 }, [id])
 
+// const studyPost = async () => {
+//     const study = await axios.post(`http://localhost:3001/api/posts/new`, {
+//         displayName: display,
+//         url: "google",
+//         cert: req.param.id
+//     })
+//     console.log(study)
+// }
+
     return (
         <div className="certDet">
             <h1 className="certTitle">{cert.organization} {cert.name}</h1>

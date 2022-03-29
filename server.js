@@ -2,10 +2,11 @@ const express = require('express')
 const cors = require('cors')
 const PORT = process.env.PORT || 3001
 const db = require('./db')
-const { Cert } = require('./models')
+const { Cert, Study } = require('./models')
 require("dotenv").config()
 const bodyParser = require('body-parser')
 const router =require("./routes")
+const req = require('express/lib/request')
 
 const app = express()
 app.use(bodyParser.json())
@@ -26,6 +27,7 @@ app.get('/search', async (req, res) => {
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`)
  })
-app.listen(PORT, () => {
+
+ app.listen(PORT, () => {
   console.log(`Express server listening on port ${PORT}`)
 })

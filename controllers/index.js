@@ -1,4 +1,5 @@
-const { Cert } = require("../models")
+const res = require("express/lib/response");
+const { Cert, Study } = require("../models")
 
 
 const getAllCert = async (req, res) => {
@@ -37,9 +38,25 @@ const getId = async (req, res) => {
     }
 }
 
+const postStudy = async (req, res) => {
+    try {
+        const {displayName, url} = req.body
+        const study = new Study({displayName, url})
+        console.log(study)
+
+        study.save()
+        // await resource.save()
+        // const study = await Cert.updateOne({ _id: req.params._id}, { $push: {learningresources: {$each: resource}}})
+        return res.status(200).json({ study })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 module.exports = {
     getAllCert,
     getByOrg,
     getLikeName,
-    getId
+    getId,
+    postStudy
 }

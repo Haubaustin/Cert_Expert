@@ -4,8 +4,8 @@ const commentSchema = require('./comment')
 const studySchema = require('./study')
 
 const Cert = mongoose.model('certifications', certSchema)
-const Comm = mongoose.model('certifications', commentSchema)
-const Study = mongoose.model('certifications', studySchema)
+const Comm = mongoose.model('comments', commentSchema)
+const Study = mongoose.model('studies', studySchema)
 
 module.exports = {
     Cert,

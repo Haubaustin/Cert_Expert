@@ -2,8 +2,8 @@ const { Schema } =require('mongoose')
 
 const Study = new Schema (
     {
-        display : { type: String, required: true},
-        url : {type: URL, required: true}
+        displayName : { type: String, required: true},
+        url : {type: String, required: true}
     },
     {timestamps: true}
 )

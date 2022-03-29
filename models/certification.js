@@ -7,7 +7,7 @@ const Certification = new Schema(
     examPrice: { type: String, required: true },
     description: { type: String, required: true },
     image: {type: String, required: true},
-    learningresources: {type: String, required: true},
+    learningresources: [{type: Schema.Types.ObjectId, ref: 'studies'}],
     difficulty: {type: String, required: true},
   
   },
