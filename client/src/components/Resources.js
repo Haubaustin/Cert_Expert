@@ -6,7 +6,7 @@ import { useState } from "react"
 const Resources = () => {
     const [data, setData] = useState({
         displayName: "",
-        url: ""
+        url: "",
     })
    
 const handleDataChange = (e) => {
@@ -20,8 +20,8 @@ const handleDataChange = (e) => {
 const handleSubmit = (e) => {
     e.preventDefault()
     const study = {
-        displayName: data.display,
-        url: data.x
+        displayName: data.displayName,
+        url: data.url
     }
     axios.post("http://localhost:3001/api/posts/new", study).then((response) => {
         console.log(response.status);
@@ -35,16 +35,16 @@ const handleSubmit = (e) => {
             <form onSubmit={handleSubmit}>
                 <input 
                 type="text"
-                name="Display"
+                name="displayName"
                 placeholder="Display Name"
-                value={data.display}
+                value={data.displayName}
                 onChange={handleDataChange}
                 />
                 <input 
                 type="url"
-                name="Display"
+                name="url"
                 placeholder="URL"
-                value={data.x}
+                value={data.url}
                 onChange={handleDataChange}
                 />
                 <button type="submit">Post</button>

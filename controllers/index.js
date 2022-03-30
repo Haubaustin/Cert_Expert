@@ -40,10 +40,14 @@ const getId = async (req, res) => {
 
 const postStudy = async (req, res) => {
     try {
-        const study = new Study(req.body)
-
-        study.save()
-        // const study = await Cert.updateOne({ _id: req.params._id}, { $push: {learningresources: {$each: resource}}})
+        const study = new Study({
+            displayName: req.body.displayName,
+            url: req.body.url,
+        })
+        await study.save()
+        // const cert = await Cert.find({ _id: req.params._id })
+        // cert.learningresources.push(study)
+        // await cert.save()
         return res.status(200).json({ study })
     } catch (error) {
         return res.status(500).send(error.message);
