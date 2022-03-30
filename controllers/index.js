@@ -43,10 +43,15 @@ const postStudy = async (req, res) => {
         const study = new Study({
             displayName: req.body.displayName,
             url: req.body.url,
+            cert: req.params._id
         })
         await study.save()
-        // const cert = await Cert.find({ _id: req.params._id })
-        // cert.learningresources.push(study)
+        // const cert = await Cert.findById({ _id: req.params._id })
+        //     // .populate({
+        //     //     path: "learningresources",
+        //     //     select: study
+        //     // })
+        //     // console.log(cert)
         // await cert.save()
         return res.status(200).json({ study })
     } catch (error) {

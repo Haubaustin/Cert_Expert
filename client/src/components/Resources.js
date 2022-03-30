@@ -1,9 +1,10 @@
 import axios from "axios"
 import { useState } from "react"
-
+import { useParams } from "react-router-dom"
 
 
 const Resources = () => {
+    const { id } = useParams()
     const [data, setData] = useState({
         displayName: "",
         url: "",
@@ -23,7 +24,7 @@ const handleSubmit = (e) => {
         displayName: data.displayName,
         url: data.url
     }
-    axios.post("http://localhost:3001/api/posts/new", study).then((response) => {
+    axios.post(`http://localhost:3001/api/post/${id}`, study).then((response) => {
         console.log(response.status);
         console.log(response.data);
       })
