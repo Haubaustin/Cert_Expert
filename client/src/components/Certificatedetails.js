@@ -1,28 +1,19 @@
 import { useEffect, useState } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
+import Resources from "./Resources"
 
 const Certificatedetails = () => {
-const [cert, Setcert]=useState({})
-const { id } = useParams()
-
+    const [cert, Setcert]=useState({})
+    const { id } = useParams()
+   
 useEffect(()=> {
     const getCertResults = async () => {
         const certs = await axios.get(`http://localhost:3001/api/id/${id}`)
         Setcert(certs.data.id[0])
-        console.log(certs.data.id[0].field)
     }
     getCertResults()
 }, [id])
-
-// const studyPost = async () => {
-//     const study = await axios.post(`http://localhost:3001/api/posts/new`, {
-//         displayName: display,
-//         url: "google",
-//         cert: req.param.id
-//     })
-//     console.log(study)
-// }
 
     return (
         <div className="certDet">
@@ -38,6 +29,7 @@ useEffect(()=> {
                  </div>
             </div>
             <h2 className="Title">Study Resources</h2>
+            <Resources />
             <div className="study">
                 Learning Resources: {cert.learningresources}
             </div>
