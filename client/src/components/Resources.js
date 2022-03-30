@@ -1,10 +1,11 @@
 import axios from "axios"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import { useParams } from "react-router-dom"
 
 
 const Resources = () => {
     const { id } = useParams()
+    const [rec, setRec] = useState([])
     const [data, setData] = useState({
         displayName: "",
         url: "",
@@ -29,11 +30,26 @@ const handleSubmit = (e) => {
         console.log(response.data);
       })
     }
-        
+       
+useEffect(()=> {
+    const getStudyResults = async () => {
+        const study = await axios.get(`http://localhost:3001/api/posts/${id}`)
+        setRec(study.data.rec)
+        console.log(study.data.rec)
+    }
+    getStudyResults()
+}, [])
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
+            <ul className="recList">
+                {rec.map((result) => (
+                    <li>
+                        <a href={result.url} target="_blank" rel="noreferrer">{result.displayName}</a>
+                    </li>
+                ))}
+            </ul>
+            <form onSubmit={handleSubmit} className="Resources">
                 <input 
                 type="text"
                 name="displayName"
@@ -50,6 +66,7 @@ const handleSubmit = (e) => {
                 />
                 <button type="submit">Post</button>
             </form>
+            
         </div>
     )
 }

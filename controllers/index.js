@@ -59,10 +59,20 @@ const postStudy = async (req, res) => {
     }
 }
 
+const getStudyResource = async (req, res) => {
+    try {
+        const rec = await Study.find({ "cert" : req.params._id})
+            return res.status(200).json({ rec })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 module.exports = {
     getAllCert,
     getByOrg,
     getLikeName,
     getId,
-    postStudy
+    postStudy,
+    getStudyResource
 }

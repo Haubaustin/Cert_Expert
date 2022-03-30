@@ -29,10 +29,10 @@ useEffect(()=> {
                  </div>
             </div>
             <h2 className="Title">Study Resources</h2>
-            <Resources />
             <div className="study">
-                Learning Resources: {cert.learningresources}
+            <Resources />
             </div>
+
             <h2 className="Title">Comments</h2>
             <div className="comment">
             </div>
