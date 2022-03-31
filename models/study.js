@@ -7,6 +7,7 @@ const Study = new Schema (
         url : {type: String, required: true},
         cert : {type: mongoose.Schema.Types.ObjectId,
             ref: "certifications"}
+        
         },
     {timestamps: true}
 )

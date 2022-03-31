@@ -173,6 +173,14 @@ body {
   margin-left: 5px;
 }
 
+.editButton {
+    color: red;
+    cursor: pointer;
+    margin-left: 5px;
+    border: none;
+    background: none;
+}
+
 .Footer {
   border-top: 3px solid black;  
   height: 40px;
@@ -235,6 +243,7 @@ body {
 
 .inputButton:hover {
   transform: translateY(-1px);
+  cursor: pointer;
 }
 
 .inputButton:active {
@@ -337,6 +346,16 @@ body {
   right: 10px;
   color: rgb(0, 174, 255);
   text-shadow: 0 0 6px black;
+}
+
+.updateDiv {
+  display: inline-flex;
+}
+
+.updateList {
+  list-style: none;
+  padding-left: 0px;
+  width: 33%;
 }
 
 .why > p, .how > p {

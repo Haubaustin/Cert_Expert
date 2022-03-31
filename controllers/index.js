@@ -77,7 +77,8 @@ const delStudyResource = async (req, res) => {
 
 const recentUpdates = async (req,res) => {
     try {
-        const recent = await Study.find().sort({created_at: -1})
+        const recent = await Study.find({}).sort({createdAt: -1}).limit(3)
+            console.log(recent)
             return res.status(200).json({ recent })
     } catch (error) {
         return res.status(500).send(error.message);

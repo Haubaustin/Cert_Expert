@@ -1,11 +1,40 @@
-import React from "react";
+import React, { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Main = () => {
+    const [ data, setData] = useState([])
+
+    useEffect(()=> {
+        const getRecent = async () => {
+            const recentUp = await axios.get(`http://localhost:3001/api/new`)
+            setData(recentUp.data.recent)
+            console.log(recentUp.data.recent)
+        }
+        getRecent()
+    }, [])
+
+
+
 
     return (
         <div>
             <section className="recUpdate">
                 <h3>Recently Updated</h3>
+                <div className="updateDiv">
+                {data.map((recent) => (
+                        <ul className="updateList">
+                            <Link to={`/search/${recent.cert}`}>
+                            <li>Study Resource: {recent.displayName} </li>
+                            <br></br>
+                            <li>Updated At: {recent.updatedAt}</li>
+                            </Link>
+                        </ul>
+                ))}
+
+                    </div>
+
             </section>
             <div className="about">
                 <section className="why">

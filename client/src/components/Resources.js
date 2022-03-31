@@ -5,6 +5,7 @@ import {  useParams } from "react-router-dom"
 
 const Resources = () => {
     const { id } = useParams()
+    const [ show, setShow ] =useState(false)
     const [rec, setRec] = useState([])
     const [data, setData] = useState({
         displayName: "",
@@ -61,6 +62,11 @@ const handleDelete = async (e) => {
                 {rec.map((result) => (
                     <li>
                         <a href={result.url} target="_blank" rel="noreferrer">{result.displayName}</a>
+                        <form style={{ display : show ? 'block' : 'none'}} className="editForm">
+                            <input type="text" value={result.displayName} />
+                            <button>Submit</button>
+                        </form>
+                        <button className="editButton" onClick={()=> setShow((s) => !s)}>[...]</button>
                         <button name={result.displayName} onClick={handleDelete} className="delButton">X</button>
                     </li>
                 ))}

@@ -28,7 +28,7 @@ const MainSearch = () => {
         if (e.target.value === "") {
             return }
             else {
-        const org = await axios.get(`http://localhost:3001/api/${e.target.value}`)
+        const org = await axios.get(`http://localhost:3001/api/org/${e.target.value}`)
         setOrgName(org.data.organization)
     }
 }

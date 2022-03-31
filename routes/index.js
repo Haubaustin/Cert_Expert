@@ -4,11 +4,11 @@ const router = Router()
 
 
 router.get('/all', controllers.getAllCert)
-router.get('/:organization', controllers.getByOrg )
+router.get('/org/:organization', controllers.getByOrg )
 router.get('/name/:name', controllers.getLikeName)
 router.get('/id/:_id', controllers.getId)
 router.get("/posts/:_id", controllers.getStudyResource)
-router.get('/posts', controllers.recentUpdates)
+router.get("/new", controllers.recentUpdates)
 
 router.post('/post/:_id', controllers.postStudy)
 
