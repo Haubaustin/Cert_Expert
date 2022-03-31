@@ -3,11 +3,10 @@ import Searchbar from "./Searchbar";
 import axios from "axios"
 import Dropdown from "./Dropdown";
 import Certificate from "./Certificate";
-import { Link } from "react-router-dom";
 
 
 const MainSearch = () => {
-    let [searchName, setSearchName] = useState([])
+    let [searchName, setSearchName] = useState("")
     const [nameResults, setNameResults] = useState([])
     const [orgName, setOrgName] = useState([])
     const [searchBy, setSearchBy] = useState(true)
@@ -48,7 +47,7 @@ const MainSearch = () => {
                         <h5>By Organization</h5><br></br>
                     <Dropdown
                         options={[
-                            {label: "Null", value: ""},
+                            {label: "Null", value: "null"},
                             {label: 'AWS', value: "AWS"},
                             {label: 'Microsoft', value: "Microsoft"},
                             {label: 'CompTIA', value: "CompTIA"},

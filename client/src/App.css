@@ -160,6 +160,19 @@ body {
   margin-right: 15px;
 }
 
+.delButton {
+  color: red;
+  cursor: pointer;
+  background-color: aliceblue;
+  border: 1px solid red;
+  border-radius: 50%;
+  margin-left: 5px;
+}
+
+.diff {
+  margin-left: 5px;
+}
+
 .Footer {
   border-top: 3px solid black;  
   height: 40px;
@@ -195,6 +208,39 @@ body {
   font-size: 22px;
 }
 
+.input {
+  outline: none;
+  border: none;
+  box-shadow: -1px 2px 2px black;
+  margin-right: 5px;
+  background-color: rgba(128, 128, 128, 0.314);
+}
+
+.input::placeholder {
+  color: rgba(0, 0, 0, 0.717);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+}
+
+.input:hover::placeholder {
+  color: white;
+}
+
+.inputButton {
+  box-shadow: -1px 2px 2px black;
+  font-family: 'Roboto Slab', serif;
+  margin-top: 1px;
+  font-size: 11px;
+}
+
+.inputButton:hover {
+  transform: translateY(-1px);
+}
+
+.inputButton:active {
+  transform: translateY(1px);
+}
+
 .Main {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -202,10 +248,26 @@ body {
 
 .recList {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   list-style-type: none;
   padding-left: 0px;
+  min-height: 100px;
+  background-color: aliceblue;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 3px solid rgb(0, 0, 0);
+  margin: 0;
 }
+
+.Resources > form {
+  background-color: aliceblue;
+  height: 30px;
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  border: 3px solid black;
+  border-top: none;
+}
+
 
 .recUpdate {
   height: 250px;
@@ -244,6 +306,16 @@ body {
   top: 60px;
 }
 
+.newStudy {
+  margin-bottom: 0;
+  margin-top: 19.92px;
+  background-color: gray;
+  border-top-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border: 3px solid black;
+  color: white;
+}
+
 .search {
   border: 2px solid black;
   max-height: calc(80vh);
@@ -256,18 +328,6 @@ body {
 .search > h3 {
   border-bottom: 2px dotted black;
   padding-bottom: 5px;
-}
-
-.study {
-  min-height: 100px;
-  background-color: aliceblue;
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  border: 3px solid rgb(0, 0, 0);
-
-  display: flex;
-  justify-content: center;
-
 }
 
 .title {

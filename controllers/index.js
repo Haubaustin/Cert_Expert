@@ -1,5 +1,5 @@
 const res = require("express/lib/response");
-const { Cert, Study } = require("../models")
+const { Cert, Study } = require("../models");
 
 
 const getAllCert = async (req, res) => {
@@ -40,19 +40,17 @@ const getId = async (req, res) => {
 
 const postStudy = async (req, res) => {
     try {
+        const id = req.params._id
         const study = new Study({
             displayName: req.body.displayName,
             url: req.body.url,
-            cert: req.params._id
+            cert: id,
         })
         await study.save()
-        // const cert = await Cert.findById({ _id: req.params._id })
-        //     // .populate({
-        //     //     path: "learningresources",
-        //     //     select: study
-        //     // })
-        //     // console.log(cert)
-        // await cert.save()
+        // const relatedCert = await Cert.findById({ _id: req.params._id })
+        //     console.log(relatedCert)
+        //     relatedCert.learningresources.push(study)
+        // await relatedCert.save()
         return res.status(200).json({ study })
     } catch (error) {
         return res.status(500).send(error.message);
@@ -68,11 +66,31 @@ const getStudyResource = async (req, res) => {
     }
 }
 
+const delStudyResource = async (req, res) => {
+    try {
+        const del = await Study.find({ "displayName" : req.params.name }).deleteOne().exec()
+            return res.status(200).json({ del })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
+const recentUpdates = async (req,res) => {
+    try {
+        const recent = await Study.find().sort({created_at: -1})
+            return res.status(200).json({ recent })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 module.exports = {
     getAllCert,
     getByOrg,
     getLikeName,
     getId,
     postStudy,
-    getStudyResource
+    getStudyResource,
+    delStudyResource,
+    recentUpdates
 }

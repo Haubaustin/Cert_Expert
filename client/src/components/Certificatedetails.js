@@ -23,9 +23,8 @@ useEffect(()=> {
                 <img src={cert.image} alt = '' />
                 </div>
                 <div className="crRight">
-                <p>Description: {cert.description}</p>
-                <p>Price ${cert.examPrice}</p>
-                <p>Difficulty: {cert.difficulty}</p>
+                    <p>Description: {cert.description}</p>
+                    <p>Price ${cert.examPrice}</p>
                  </div>
             </div>
             <h2 className="Title">Study Resources</h2>
