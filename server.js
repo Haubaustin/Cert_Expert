@@ -20,10 +20,12 @@ app.get('/', (req, res) => {
   res.send('This is root!')
 })
 
-app.get('/search', async (req, res) => {
-  const certificate = await Cert.find()
-  res.json(certificate)
-})
+// app.get('/search', async (req, res) => {
+//   const certificate = await Cert.find()
+//   res.json(certificate)
+// })
+
+
 
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`)

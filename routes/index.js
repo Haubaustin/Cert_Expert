@@ -10,6 +10,8 @@ router.get('/id/:_id', controllers.getId)
 router.get("/posts/:_id", controllers.getStudyResource)
 router.get("/new", controllers.recentUpdates)
 
+router.post("/updatepost/:name", controllers.updStudyResource)
+
 router.post('/post/:_id', controllers.postStudy)
 
 router.delete('/post/:name', controllers.delStudyResource)

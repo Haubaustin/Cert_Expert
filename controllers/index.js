@@ -85,6 +85,19 @@ const recentUpdates = async (req,res) => {
     }
 }
 
+const updStudyResource = async (req, res) => {
+    try {
+        console.log(req.body.displayName)
+        console.log(req.params.name)
+        const upd = await Study.findOneAndUpdate({displayName : req.params.name }, {displayName : req.body.displayName})
+            upd.save()
+            console.log(upd)
+            return res.status(200).json({ upd })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
 module.exports = {
     getAllCert,
     getByOrg,
@@ -93,5 +106,6 @@ module.exports = {
     postStudy,
     getStudyResource,
     delStudyResource,
-    recentUpdates
+    recentUpdates,
+    updStudyResource
 }

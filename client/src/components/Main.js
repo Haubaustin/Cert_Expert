@@ -24,13 +24,14 @@ const Main = () => {
                 <h3>Recently Updated</h3>
                 <div className="updateDiv">
                 {data.map((recent) => (
-                        <ul className="updateList">
+                        <div className="updateList">
                             <Link to={`/search/${recent.cert}`}>
-                            <li>Study Resource: {recent.displayName} </li>
+                            Study Resource: {recent.displayName} 
                             <br></br>
-                            <li>Updated At: {recent.updatedAt}</li>
+                            <br></br>
+                            Updated At:{recent.updatedAt}
                             </Link>
-                        </ul>
+                        </div>
                 ))}
 
                     </div>

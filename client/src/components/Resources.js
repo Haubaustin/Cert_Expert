@@ -4,70 +4,98 @@ import {  useParams } from "react-router-dom"
 
 
 const Resources = () => {
+//***Hooks***
     const { id } = useParams()
     const [ show, setShow ] =useState(false)
+    const [ update, setUpdate ] = useState({
+        displayName: ''
+    })
     const [rec, setRec] = useState([])
     const [data, setData] = useState({
         displayName: "",
         url: "",
     })
 
-const refreshPage = () => {
-    window.location.reload(false)
+//***Global***
+
+const getStudyResults = async () => {
+    const study = await axios.get(`http://localhost:3001/api/posts/${id}`)
+    setRec(study.data.rec)
 }
 
-const handleDataChange = (e) => {
+useEffect(()=> {
+    getStudyResults()
+},[])
+
+//***Data Updates***
+const handleDataInput = (e) => {
     const value = e.target.value
     setData({
         ...data,
         [e.target.name]: value
     })
 }
+const handleDataUpdate = (e) => {
+    const value = e.target.value
+    setUpdate({
+      ...update,
+      displayName: value  
+    })
+}
 
+//***API Calls on Click***
 const handleSubmit = (e) => {
     e.preventDefault()
     const study = {
         displayName: data.displayName,
         url: data.url
     }
-    axios.post(`http://localhost:3001/api/post/${id}`, study).then((response) => {
+    axios.post(`http://localhost:3001/api/post/${id}`, study)
+        .then((response) => {
         console.log(response.status)
         console.log(response.data)
-        refreshPage()
+        getStudyResults()
       })
-    }
-       
-useEffect(()=> {
-    const getStudyResults = async () => {
-        const study = await axios.get(`http://localhost:3001/api/posts/${id}`)
-        setRec(study.data.rec)
-    }
-    getStudyResults()
-},[id])
-
+}
 const handleDelete = async (e) => {
+    const alert = prompt("Are you sure you would like to delete? Type delete below to continue")
+        if (alert == "delete") {
     const name = e.target.name
-    console.log(name)
-    await axios.delete(`http://localhost:3001/api/post/${name}`, name).then((response) => {
+    await axios.delete(`http://localhost:3001/api/post/${name}`, name)
+        .then((response) => {
         console.log(response.status);
         console.log(response.data);
-        refreshPage()
+        getStudyResults()
       })
     }
-
+}
+const handleUpdate = async (e) => {
+    const studyName = e.target.name
+        await axios.post(`http://localhost:3001/api/updatepost/${studyName}`, update)
+        .then((response) => {
+        console.log(response.status);
+        console.log(response.data);
+      })
+}
 
     return (
         <div className="Resources">
             <ul className="recList">
                 {rec.map((result) => (
-                    <li>
-                        <a href={result.url} target="_blank" rel="noreferrer">{result.displayName}</a>
-                        <form style={{ display : show ? 'block' : 'none'}} className="editForm">
-                            <input type="text" value={result.displayName} />
-                            <button>Submit</button>
-                        </form>
-                        <button className="editButton" onClick={()=> setShow((s) => !s)}>[...]</button>
-                        <button name={result.displayName} onClick={handleDelete} className="delButton">X</button>
+                    <li key={result._id}>
+                        <a href={result.url}  target="_blank" rel="noreferrer">{result.displayName}</a>
+                        <button className="editButton" onClick={()=> setShow((s) => !s)}>[edit]</button>
+                        <div style={{ display : show ? 'block' : 'none'}} className="editForm">
+                            <form>
+                            <input type="text" 
+                                placeholder={result.displayName}
+                                onChange={handleDataUpdate}
+                                 />
+                                
+                            <button type="submit" name={result.displayName} onClick={handleUpdate}>Update</button>
+                            </form>
+                        <button name={result.displayName} onClick={handleDelete} className="delButton">Delete</button>
+                        </div>
                     </li>
                 ))}
             </ul>
@@ -78,7 +106,7 @@ const handleDelete = async (e) => {
                 name="displayName"
                 placeholder="Display Name"
                 value={data.displayName}
-                onChange={handleDataChange}
+                onChange={handleDataInput}
                 className="input"
                 />
                 <input 
@@ -86,7 +114,7 @@ const handleDelete = async (e) => {
                 name="url"
                 placeholder="URL eg http://123.com"
                 value={data.url}
-                onChange={handleDataChange}
+                onChange={handleDataInput}
                 className="input"
                 />
                 <button className="inputButton" type="submit" >Post</button>
