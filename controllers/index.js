@@ -107,7 +107,7 @@ const createUser = async (req, res) => {
         const salt = await bcrypt.genSalt(Number(process.env.SALT));
         const hashPassword = await bcrypt.hash(req.body.password, salt);
         await new User({ ...req.body, password: hashPassword }).save();
-            return res.status(200).json({ user })
+            return res.status(200).json({ message : "Account Created!" })
         }
         catch (error) {
                 return res.status(500).send(error.message);
@@ -118,7 +118,7 @@ const checkUser = async (req, res) => {
     try {
         const user = await User.findOne({ userName: req.body.userName });
 		if (!user)
-			return res.status(401).send({ message: "Invalid UserName" });
+			return res.status(401).send({ message: "Invalid UserName or Password" });
 
             const pass = await bcrypt.compare(
                 req.body.password,
@@ -129,7 +129,7 @@ const checkUser = async (req, res) => {
             const token = user.generateAuthToken();
             res.status(200).send({ data: token, message: "logged in successfully" })
         }
-    catch (error) {
+        catch (error) {
             return res.status(500).send(error.message);
         }
 }

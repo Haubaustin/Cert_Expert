@@ -15,8 +15,7 @@ const Nav = () => {
             <Link to="/" className='homeLink'>Home</Link>
             <Link to="/search" className='searchLink'>Search</Link>
             </section>
-            <span className='title'>
-                Cert Expert<br></br>
+            <span className='logout'>
                 <button onClick={handleLogout}>Logout</button>
             </span>
         </div>
