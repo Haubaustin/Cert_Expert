@@ -45,16 +45,16 @@ const Register = () => {
             <div className="welcomeBack">
                 <h1>Returning?</h1>
                 <Link to="/login">
-                <button>Login</button>
+                <button className="signInButton">Login</button>
                 </Link>
             </div>
             <div className="createAcc">
                 <h1>Create an Account</h1>
                 <form onSubmit={handleSignUp}>
-                    <input type="text" placeholder="Username" name="userName" value={data.userName} onChange={handleRegister} /><br></br>
+                    <input type="text" placeholder="Username" name="userName" value={data.userName} onChange={handleRegister}/><br></br>
                     <input type="text" placeholder="Email" name="email" value={data.email} onChange={handleRegister}/><br></br>
                     <input type="password" placeholder="Password" name="password" value={data.password} onChange={handleRegister}/><br></br>
-                    <button type="submit" >Register</button>
+                    <button type="submit" className="signInButton">Register</button>
                 </form>
                     <h4 className="response">{response}</h4>
             </div>
