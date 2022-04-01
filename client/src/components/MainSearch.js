@@ -36,15 +36,15 @@ const MainSearch = () => {
     return (
         <div className="Main">
             <div className="search">
-                <h3>Search</h3>
-                <div className="searchFilters">
-                    <h5>By Name</h5>
+                <h3 className="subTitle">Search</h3>
+                <div className="subSect">
+                    <h4>By Name</h4>
                     <Searchbar 
                         onChange={handleNameChange}
                         onSubmit={findByName}
                         value={searchName}
                         />
-                        <h5>By Organization</h5><br></br>
+                        <h4>By Organization</h4><br></br>
                     <Dropdown
                         options={[
                             {label: "Null", value: "null"},

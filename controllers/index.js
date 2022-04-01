@@ -48,10 +48,6 @@ const postStudy = async (req, res) => {
             cert: id,
         })
         await study.save()
-        // const relatedCert = await Cert.findById({ _id: req.params._id })
-        //     console.log(relatedCert)
-        //     relatedCert.learningresources.push(study)
-        // await relatedCert.save()
         return res.status(200).json({ study })
     } catch (error) {
         return res.status(500).send(error.message);

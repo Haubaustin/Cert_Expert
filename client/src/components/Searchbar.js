@@ -13,6 +13,7 @@ const Searchbar = (props) => {
                     onChange={props.onChange}
                     className="textInput"
                 />
+                <br></br>
                 <button type="submit"  
                     disabled={!props.value}
                     className="signInButton">

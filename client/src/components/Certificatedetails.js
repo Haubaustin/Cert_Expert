@@ -20,18 +20,17 @@ useEffect(()=> {
             <h1 className="certTitle">{cert.organization} {cert.name}</h1>
             <div className="certResult">
                 <div className="crLeft">
-                <img src={cert.image} alt = '' />
+                    <img src={cert.image} alt = '' />
                 </div>
                 <div className="crRight">
                     <p>Description: {cert.description}</p>
                     <p>Price ${cert.examPrice}</p>
-                 </div>
-            </div>
-            <h2 className="Title">Study Resources</h2>
-            <div className="study">
+                </div>
+                </div>
+                <h2 className="Title">Study Resources</h2>
+                <div className="study">
                 <Resources />
-            </div>
-
+                </div>
             <h2 className="Title">Comments</h2>
             <div className="comment">
             </div>
