@@ -14,15 +14,16 @@ function App() {
 
   return (
     <div className="App">
-       <Header />
+       <Header
+        user={user} />
      <div className='appMain'>
        <Routes>
          {user && <Route path='/' element={<Main />} />}
          {user && <Route path='search' element={<SearchPage />} />}
+         {user &&<Route path='search/:id' element={<Certificatedetails />}  /> }
          <Route path='/' element={<Navigate to="/login" />}/>
          <Route path='/signup' element={<Register />} />
          <Route path='/login' element={<Login />} />
-         <Route path='search/:id' element={<Certificatedetails />} />
        </Routes>
      </div>
        <Footer />

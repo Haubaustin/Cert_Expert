@@ -107,7 +107,7 @@ const createUser = async (req, res) => {
         const salt = await bcrypt.genSalt(Number(process.env.SALT));
         const hashPassword = await bcrypt.hash(req.body.password, salt);
         await new User({ ...req.body, password: hashPassword }).save();
-            return res.status(200).json({ message : "Account Created!" })
+            return res.status(200).json({ message : "Account Created! Redirecting you to the Login page " })
         }
         catch (error) {
                 return res.status(500).send(error.message);

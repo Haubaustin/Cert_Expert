@@ -7,7 +7,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const Register = () => {
     const navigate = useNavigate()
-    const [error, setError] = useState("")
+    const [response, setResponse] = useState("")
     const [data, setData] = useState({
         userName: "",
         email: "",
@@ -27,20 +27,21 @@ const Register = () => {
         e.preventDefault()
         try {
             const {data: res} = await axios.post("http://localhost:3001/api/register", data)
-            navigate("/login")
-            console.log(res.message)
-            alert(res.message)
+            setResponse(res.message)
+            setTimeout(() => {
+                navigate("/login")  
+            }, 2000);
         }
         catch (error) {
             console.log(error.response)
             console.log(error.response.status)
-            setError(error.response.data.message)
+            setResponse(error.response.data.message)
         }   
         
 }
 
     return (
-        <div>
+        <div className="Register">
             <div className="welcomeBack">
                 <h1>Returning?</h1>
                 <Link to="/login">
@@ -50,12 +51,12 @@ const Register = () => {
             <div className="createAcc">
                 <h1>Create an Account</h1>
                 <form onSubmit={handleSignUp}>
-                    <input type="text" placeholder="Username" name="userName" value={data.userName} onChange={handleRegister} />
-                    <input type="text" placeholder="Email" name="email" value={data.email} onChange={handleRegister}/>
-                    <input type="password" placeholder="Password" name="password" value={data.password} onChange={handleRegister}/>
+                    <input type="text" placeholder="Username" name="userName" value={data.userName} onChange={handleRegister} /><br></br>
+                    <input type="text" placeholder="Email" name="email" value={data.email} onChange={handleRegister}/><br></br>
+                    <input type="password" placeholder="Password" name="password" value={data.password} onChange={handleRegister}/><br></br>
                     <button type="submit" >Register</button>
                 </form>
-                    <h5>{error}</h5>
+                    <h4 className="response">{response}</h4>
             </div>
         </div>
     )
