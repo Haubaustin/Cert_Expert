@@ -1,5 +1,11 @@
 import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+//Image Links
+// https://ibb.co/LdM646D
+// https://ibb.co/0hXdvnS
+// https://ibb.co/GkPBHcX
+// https://ibb.co/34cFkcN
+
 
 const Header = (props) => {
     const [login, setLogin] = useState(true)
@@ -17,6 +23,7 @@ const Header = (props) => {
 
     return (
         <div className='Header'>
+            <img src="https://i.ibb.co/34cFkcN/Cert-Expert-logos-white.png" alt="Cert-Expert-logos-white" border="0" className='titleImg'/>
              <h1 className='title'>
                 Cert Expert
             </h1>
@@ -27,9 +34,11 @@ const Header = (props) => {
                             Home
                     </Link>
                 </span>
+                
                 <span 
                     className='navSearch' 
                     hidden={login}>
+
                     <Link to="/search" 
                         className='searchLink'>
                             Search

@@ -411,6 +411,13 @@ body {
   margin-bottom: 0px;
 }
 
+.titleImg {
+  left: 32px;
+  position: absolute;
+  top: -20px;
+  height: 110px;
+}
+
 .textInput {
   font: inherit;
   border: 0;
@@ -456,3 +463,77 @@ body {
   text-shadow: 0 0 1px rgb(0, 0, 0);
   font-size: 22px;
 }
+
+@media screen and (max-width: 750px) {
+  .about {
+    display: block;
+  }
+
+  .Certificate {
+    max-width: 200px;
+  }
+
+  .crLeft > img {
+    height: 150px;
+  }
+
+  .createAcc > h1 {
+    margin-top: 0px;
+  }
+  
+ .how, .why {
+    max-width: 300px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .Login {
+    display: block;
+    margin-top: 25px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .Register {
+    display: block;
+    margin-top: 25px;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+  }
+
+  .search {
+    width: 120px;
+    font-size: smaller;
+    margin-left: 5px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .signUp, .signIn {
+    padding: 15px;
+    max-width: 300px;
+  }
+
+  .study > div > form {
+    height: 50px;
+  }
+
+  .textInput {
+    max-width: 80px;
+  }
+
+  .welcomeBack, .createAcc {
+    padding: 15px;
+    max-width: 300px;
+  }
+}
+
+
