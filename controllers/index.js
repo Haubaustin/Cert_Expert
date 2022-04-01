@@ -1,5 +1,6 @@
 const res = require("express/lib/response");
-const { Cert, Study } = require("../models");
+const { Cert, Study, User } = require("../models");
+const bcrypt = require("bcrypt")
 
 
 const getAllCert = async (req, res) => {
@@ -98,6 +99,40 @@ const updStudyResource = async (req, res) => {
     }
 }
 
+const createUser = async (req, res) => {
+    try {
+    const user = await User.findOne({ userName : req.body.userName})
+        if (user)
+            return res.status(409).send({ message: "Username already in use"})
+        const salt = await bcrypt.genSalt(Number(process.env.SALT));
+        const hashPassword = await bcrypt.hash(req.body.password, salt);
+        await new User({ ...req.body, password: hashPassword }).save();
+            return res.status(200).json({ user })
+        }
+        catch (error) {
+                return res.status(500).send(error.message);
+            }
+}
+
+const checkUser = async (req, res) => {
+    try {
+        const user = await User.findOne({ userName: req.body.userName });
+		if (!user)
+			return res.status(401).send({ message: "Invalid UserName" });
+
+            const pass = await bcrypt.compare(
+                req.body.password,
+                user.password)
+            if (!pass)
+                return res.status(401).send({ message: "Invalid Username or Password" })
+                
+            const token = user.generateAuthToken();
+            res.status(200).send({ data: token, message: "logged in successfully" })
+        }
+    catch (error) {
+            return res.status(500).send(error.message);
+        }
+}
 module.exports = {
     getAllCert,
     getByOrg,
@@ -107,5 +142,7 @@ module.exports = {
     getStudyResource,
     delStudyResource,
     recentUpdates,
-    updStudyResource
+    updStudyResource,
+    createUser,
+    checkUser
 }

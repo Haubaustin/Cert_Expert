@@ -24,7 +24,7 @@ const Register = () => {
     }
 
     const handleSignUp = async (e) => {
-        axios.post("http://localhost:3001/Register", data)
+        axios.post("http://localhost:3001/api/register", data)
             .then((response) => {
             console.log(response.status);
             console.log(response.data);
@@ -32,6 +32,7 @@ const Register = () => {
         }
     )
 }
+
     return (
         <div>
             <div className="welcomeBack">
