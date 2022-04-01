@@ -4,6 +4,11 @@ import { Link } from 'react-router-dom'
 
 
 const Nav = () => {
+    const handleLogout = () => {
+        localStorage.removeItem("token")
+        window.location.reload()
+    }
+
     return (
         <div className='Nav'>
             <section className='navLinks'>
@@ -11,7 +16,8 @@ const Nav = () => {
             <Link to="/search" className='searchLink'>Search</Link>
             </section>
             <span className='title'>
-                Cert Expert
+                Cert Expert<br></br>
+                <button onClick={handleLogout}>Logout</button>
             </span>
         </div>
     )
