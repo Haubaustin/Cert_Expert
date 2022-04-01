@@ -22,12 +22,25 @@ const Header = (props) => {
             </h1>
             <section className='navLinks'>
                 <span className='navHome'>
-                    <Link to="/" className='homeLink'>Home</Link>
+                    <Link to="/" 
+                        className='homeLink'>
+                            Home
+                    </Link>
                 </span>
-                <span className='navSearch' hidden={login}>
-                    <Link to="/search" className='searchLink'>Search</Link>
+                <span 
+                    className='navSearch' 
+                    hidden={login}>
+                    <Link to="/search" 
+                        className='searchLink'>
+                            Search
+                    </Link>
                 </span>
-                <button onClick={handleLogout} hidden={login} className="logout">Logout</button>
+                <button 
+                    onClick={handleLogout} 
+                    hidden={login} 
+                    className="logout">
+                        Logout
+                </button>
                 
             </section>
 

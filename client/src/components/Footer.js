@@ -13,15 +13,15 @@ const Footer = () => {
     return (
         <div className="Footer">
             <a href="https://www.linkedin.com/in/austin-haubenschild-211472169/" 
-            className="linkedin" 
-            target="_blank" 
-            rel="noreferrer">
+                className="linkedin" 
+                target="_blank" 
+                rel="noreferrer">
                 <FontAwesomeIcon icon={faLinkedin} size="2x" />
             </a>
             <a href="https://github.com/Haubaustin"
-            className="github" 
-            target="_blank" 
-            rel="noreferrer">
+                className="github" 
+                target="_blank" 
+                rel="noreferrer">
                 <FontAwesomeIcon icon={faGithubSquare} size="2x" />
             </a>
         </div>

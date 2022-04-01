@@ -29,7 +29,7 @@ useEffect(()=> {
             </div>
             <h2 className="Title">Study Resources</h2>
             <div className="study">
-            <Resources />
+                <Resources />
             </div>
 
             <h2 className="Title">Comments</h2>

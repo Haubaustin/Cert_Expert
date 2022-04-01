@@ -35,16 +35,36 @@ const Login = () => {
             <div className="signIn">
                 <h1>Login to your Account</h1>
                 <form >
-                    <input type="text" placeholder="Username" name="userName" onChange={handleChange} value={data.userName} /> <br></br>
-                    <input type="text" placeholder="Password" name="password" onChange={handleChange} value={data.password} /> <br></br>
-                    <button onClick={handleLogin} className="signInButton">Login</button>
+                    <input type="text" 
+                        placeholder="Username" 
+                        name="userName" 
+                        onChange={handleChange} 
+                        value={data.userName} 
+                        className="textInput" /> 
+                            <br></br>
+                    <input 
+                        type="text" 
+                        placeholder="Password" 
+                        name="password" 
+                        onChange={handleChange} 
+                        value={data.password} 
+                        className="textInput" /> 
+                        <br></br>
+                    <button 
+                    onClick={handleLogin} 
+                    className="signInButton">
+                        Login
+                    </button>
                 </form>
                 <h5>{error}</h5>
             </div>
             <div className="signUp">
                 <h1>Need Account?</h1>
                 <Link to="/signup">
-                <button className="signInButton">Sign Up!</button>
+                    <button 
+                        className="signInButton">
+                        Sign Up!
+                    </button>
                 </Link>
             </div>
         </div>

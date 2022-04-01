@@ -5,14 +5,19 @@ const Searchbar = (props) => {
     return (
         <div className="SearchBar">
             <form onSubmit={props.onSubmit}>
-            <input 
-            id="name" 
-            type={"text"} 
-            placeholder="Name of Certificate" 
-            value={props.value}
-            onChange={props.onChange}
-            />
-            <button type="submit" disabled={!props.value}>Search</button>
+                <input 
+                    id="name" 
+                    type={"text"} 
+                    placeholder="Name of Certificate" 
+                    value={props.value}
+                    onChange={props.onChange}
+                    className="textInput"
+                />
+                <button type="submit"  
+                    disabled={!props.value}
+                    className="signInButton">
+                    Search
+                </button>
             </form>
         </div>
     )

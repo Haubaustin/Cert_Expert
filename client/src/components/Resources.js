@@ -83,18 +83,36 @@ const handleUpdate = async (e) => {
             <ul className="recList">
                 {rec.map((result) => (
                     <li key={result._id}>
-                        <a href={result.url}  target="_blank" rel="noreferrer">{result.displayName}</a>
-                        <button className="editButton" onClick={()=> setShow((s) => !s)}>[edit]</button>
-                        <div style={{ display : show ? 'block' : 'none'}} className="editForm">
+                        <a href={result.url}  
+                            target="_blank" 
+                            rel="noreferrer">
+                                {result.displayName}
+                        </a>
+                        <button 
+                            className="editButton" 
+                            onClick={()=> setShow((s) => !s)}>
+                                [edit]
+                        </button>
+                        <div 
+                            style={{ display : show ? 'block' : 'none'}} 
+                            className="editForm">
                             <form>
-                            <input type="text" 
-                                placeholder={result.displayName}
-                                onChange={handleDataUpdate}
-                                 />
-                                
-                            <button type="submit" name={result.displayName} onClick={handleUpdate}>Update</button>
+                                <input type="text" 
+                                    placeholder={result.displayName}
+                                    onChange={handleDataUpdate}/>
+                                    <button 
+                                        type="submit" 
+                                        name={result.displayName} 
+                                        onClick={handleUpdate}>
+                                            Update
+                                    </button>
                             </form>
-                        <button name={result.displayName} onClick={handleDelete} className="delButton">Delete</button>
+                            <button 
+                                name={result.displayName} 
+                                onClick={handleDelete} 
+                                className="delButton">
+                                    Delete
+                            </button>
                         </div>
                     </li>
                 ))}
@@ -102,22 +120,26 @@ const handleUpdate = async (e) => {
             <h4 className="newStudy">Post a study resource</h4>
             <form onSubmit={handleSubmit} >
                 <input 
-                type="text"
-                name="displayName"
-                placeholder="Display Name"
-                value={data.displayName}
-                onChange={handleDataInput}
-                className="input"
+                    type="text"
+                    name="displayName"
+                    placeholder="Display Name"
+                    value={data.displayName}
+                    onChange={handleDataInput}
+                    className="input"
                 />
                 <input 
-                type="url"
-                name="url"
-                placeholder="URL eg http://123.com"
-                value={data.url}
-                onChange={handleDataInput}
-                className="input"
+                    type="url"
+                    name="url"
+                    placeholder="URL eg http://123.com"
+                    value={data.url}
+                    onChange={handleDataInput}
+                    className="input"
                 />
-                <button className="inputButton" type="submit" >Post</button>
+                <button 
+                    className="inputButton" 
+                    type="submit">
+                        Post
+                </button>
             </form>
             
         </div>
