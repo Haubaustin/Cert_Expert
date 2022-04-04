@@ -4,37 +4,40 @@ import axios from "axios"
 
 
 
-const Newcomment = (props) => {
+const Newcomment = () => {
     const token = localStorage.getItem("jwt")
     const [account, setAccount] = useState({})
     const { id } = useParams()
     const [data, setData] = useState({
+        userName: "",
         user: "",
         comment: "",
     })
 
     useEffect(()=> {
-        const verify = async () => {
-        const whoami = await axios.get(`http://localhost:3001/api/checkuser/${token}`)
-        setAccount(whoami.data)
-       }
        verify()
      }, [])
 
+     const verify = async () => {
+        const whoami = await axios.get(`http://localhost:3001/api/checkuser/${token}`)
+        setAccount(whoami.data)
+    }
 
    const handleDataInput = (e) => {
     const value = e.target.value
     setData({
         ...data,
+        userName: account.userName,
         user: account._id,
         comment: value
     })
+    console.log(data)
 }
 
-const handleSubmit = async (e) => {
-        e.preventDefault()
+    const handleSubmit = async (e) => {
         try {
         await axios.post(`http://localhost:3001/api/comment/${id}`, data)
+        comment.value = ""
         }    
         catch (error) {
             console.log(error)

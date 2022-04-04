@@ -53,6 +53,10 @@ const postStudy = async (req, res) => {
             cert: id,
         })
         await study.save()
+
+        const certificate = await Cert.findById(id)
+            certificate.learningresources.push(study)
+            await certificate.save()
         return res.status(200).json({ study })
     } catch (error) {
         return res.status(500).send(error.message);
@@ -165,14 +169,16 @@ const postComment = async (req, res) => {
     try {
         const id = req.params._id
         const comment = new Comm({
+            userName: req.body.userName,
             user: req.body.user,
             text: req.body.comment,
             cert: id,
         })
         await comment.save()
+
         const user = await User.findById(req.body.user)
-        user.posts.push(comment)
-        await user.save()
+            user.posts.push(comment)
+            await user.save()
         return res.status(200).json({ comment })
     } catch (error) {
         return res.status(500).send(error.message);
@@ -182,6 +188,7 @@ const postComment = async (req, res) => {
 const getComments = async (req, res) => {
     try {
         const com = await Comm.find({ "cert" : req.params._id})
+        // const user = await User.findById({})
             return res.status(200).json({ com })
     } catch (error) {
         return res.status(500).send(error.message);
