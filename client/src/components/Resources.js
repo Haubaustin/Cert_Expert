@@ -119,7 +119,8 @@ const handleUpdate = async (e) => {
                     </li>
                 ))}
             </ul>
-            <h4 className="newStudy">Post a study resource</h4>
+            <div className="newStudy">
+            <h4 className="newStudyTitle">Post a study resource</h4>
             <form onSubmit={handleSubmit} >
                 <input 
                     type="text"
@@ -137,13 +138,14 @@ const handleUpdate = async (e) => {
                     onChange={handleDataInput}
                     className="input"
                 />
+                <br></br>
                 <button 
                     className="inputButton" 
                     type="submit">
                         Post
                 </button>
             </form>
-            
+            </div>
         </div>
     )
 }

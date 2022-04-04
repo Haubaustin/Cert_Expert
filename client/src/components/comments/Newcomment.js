@@ -61,7 +61,7 @@ const Newcomment = () => {
                     
                 </textarea>
                 </div>
-                <div>
+                <div className="commentButton">
                 <button 
                     onClick={handleSubmit}
                     className="inputButton"
