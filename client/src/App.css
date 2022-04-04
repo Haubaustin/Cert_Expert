@@ -123,6 +123,25 @@ body {
   margin-bottom: 15px;
 }
 
+.commentAuthor {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.commentForm {
+  display: inline-flex;  
+}
+
+.commentForm > div > button {
+  margin-left: 15px;
+}
+
+.commentSection {
+  font: inherit;
+  margin-left: 15px;
+  width: calc(70%);
+}
+
 .crLeft, .crRight {
   background-color: aliceblue;
   border: 3px solid black;
@@ -308,6 +327,15 @@ body {
   border-top-left-radius: 25px;
   border: 3px solid black;
   color: white;
+}
+
+.Newcomment {
+  border-bottom: 2px solid black;
+  display: inline-flex;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
 }
 
 .recList {

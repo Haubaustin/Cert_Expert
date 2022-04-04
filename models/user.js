@@ -1,11 +1,18 @@
 const { Schema } = require('mongoose')
 const jwt = require("jsonwebtoken")
+const { isEmail } = require("validator")
 
 const User = new Schema (
     {
-        userName : { type: String, required: true},
-        email: {type: String, required: true},
-        password : {type: String, required: true},
+        userName : { type: String, 
+            required: true, 
+        },
+        email: {type: String, 
+            required: true, 
+        },
+        password : {type: String,
+             required: true, 
+            },
         posts : [{
             type: Schema.Types.ObjectId,
             ref: "comments"}]

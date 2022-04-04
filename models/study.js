@@ -5,8 +5,9 @@ const Study = new Schema (
         displayName : { type: String, required: true},
         url : {type: String, required: true},
         cert : {type: Schema.Types.ObjectId,
-            ref: "certifications"}
-        
+            ref: "certifications"},
+        // user: {type: Schema.Types.ObjectId,
+        //     ref: "users"}
         },
     {timestamps: true}
 )

@@ -9,9 +9,10 @@ import Certificatedetails from './components/Certificatedetails';
 import Login from './components/login/Login';
 import Register from './components/login/Register';
 
-function App() {
-  const user = localStorage.getItem("token")
 
+function App() {
+  const user = localStorage.getItem("jwt")
+  
   return (
     <div className="App">
        <Header

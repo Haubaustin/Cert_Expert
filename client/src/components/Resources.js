@@ -57,6 +57,7 @@ const handleSubmit = (e) => {
         getStudyResults()
       })
 }
+
 const handleDelete = async (e) => {
     const alert = prompt("Are you sure you would like to delete? Type delete below to continue")
         if (alert == "delete") {
@@ -69,6 +70,7 @@ const handleDelete = async (e) => {
       })
     }
 }
+
 const handleUpdate = async (e) => {
     const studyName = e.target.name
         await axios.post(`http://localhost:3001/api/updatepost/${studyName}`, update)

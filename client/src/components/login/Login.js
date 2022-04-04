@@ -20,8 +20,8 @@ const Login = () => {
     const handleLogin = async (e) => {
         e.preventDefault()
         try {
-        const {data: res} = await  axios.post("http://localhost:3001/api/login", data)
-            localStorage.setItem("token", res.data)
+        const {data: res} = await axios.post("http://localhost:3001/api/login", data)
+            localStorage.setItem("jwt", res.data)
             window.location = "/"    
         } catch (error) {
             console.log(error.response)

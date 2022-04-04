@@ -17,7 +17,7 @@ const Header = (props) => {
     }, [props.user])
 
     const handleLogout = () => {
-        localStorage.removeItem("token")
+        localStorage.removeItem("jwt")
         window.location.reload()
     }
 

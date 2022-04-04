@@ -10,7 +10,6 @@ const Main = () => {
         const getRecent = async () => {
             const recentUp = await axios.get(`http://localhost:3001/api/new`)
             setData(recentUp.data.recent)
-            console.log(recentUp.data.recent)
         }
         getRecent()
     }, [])

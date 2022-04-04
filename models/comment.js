@@ -2,8 +2,11 @@ const { Schema } =require('mongoose')
 
 const Comment = new Schema (
     {
-        name: { type: String, required: true },
-        comments: { type: String, required: true}
+        user : {type: Schema.Types.ObjectId,
+            ref: "users"},
+        text: { type: String, required: true},
+        cert: {type: Schema.Types.ObjectId,
+            ref: "certifications"}
     },
     {timestamps: true }
 )

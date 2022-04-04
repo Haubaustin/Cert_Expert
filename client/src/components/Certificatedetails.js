@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import axios from "axios"
 import { useParams } from "react-router-dom"
 import Resources from "./Resources"
+import Newcomment from "./comments/Newcomment"
 
 const Certificatedetails = () => {
     const [cert, Setcert]=useState({})
@@ -33,6 +34,7 @@ useEffect(()=> {
                 </div>
             <h2 className="Title">Comments</h2>
             <div className="comment">
+                <Newcomment />
             </div>
         </div>
     )

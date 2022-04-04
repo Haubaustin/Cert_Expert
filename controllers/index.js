@@ -1,8 +1,11 @@
 const res = require("express/lib/response");
-const { Cert, Study, User } = require("../models");
+const { Cert, Study, User, Comm } = require("../models");
 const bcrypt = require("bcrypt")
+const jwt = require("jsonwebtoken")
 
 
+//****************Certificate Searches*****************
+//##################################################
 const getAllCert = async (req, res) => {
     try {
         const certs = await Cert.find({})
@@ -39,6 +42,8 @@ const getId = async (req, res) => {
     }
 }
 
+//****************Study Resources*****************
+//##################################################
 const postStudy = async (req, res) => {
     try {
         const id = req.params._id
@@ -95,13 +100,20 @@ const updStudyResource = async (req, res) => {
     }
 }
 
+//****************User Login/Create*****************
+//##################################################
 const createUser = async (req, res) => {
     try {
     const user = await User.findOne({ userName : req.body.userName})
         if (user)
             return res.status(409).send({ message: "Username already in use"})
+
+        if (req.body.password.length < 5) 
+            return res.status(409).send({ message: "Password must be at least 5 characters"})
+
         const salt = await bcrypt.genSalt(Number(process.env.SALT));
         const hashPassword = await bcrypt.hash(req.body.password, salt);
+
         await new User({ ...req.body, password: hashPassword }).save();
             return res.status(200).json({ message : "Account Created! Redirecting you to the Login page " })
         }
@@ -110,25 +122,46 @@ const createUser = async (req, res) => {
             }
 }
 
-const checkUser = async (req, res) => {
+const loginUser = async (req, res) => {
     try {
         const user = await User.findOne({ userName: req.body.userName });
 		if (!user)
 			return res.status(401).send({ message: "Invalid UserName or Password" });
 
-            const pass = await bcrypt.compare(
+        const pass = await bcrypt.compare(
                 req.body.password,
                 user.password)
-            if (!pass)
-                return res.status(401).send({ message: "Invalid Username or Password" })
+        if (!pass)
+            return res.status(401).send({ message: "Invalid Username or Password" })
                 
-            const token = user.generateAuthToken();
+        const token = user.generateAuthToken();
             res.status(200).send({ data: token, message: "logged in successfully" })
         }
-        catch (error) {
-            return res.status(500).send(error.message);
-        }
+    catch (error) {
+        return res.status(500).send(error.message);
+    }
 }
+
+//****************Comment Section*****************
+//##################################################
+const postComment = async (req, res) => {
+    try {
+        const id = req.params._id
+        console.log(id)
+        const comment = new Comm({
+            text: req.body.comment,
+            cert: id,
+        })
+        console.log(comment)
+        await comment.save()
+        return res.status(200).json({ comment })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
+
+
+
 module.exports = {
     getAllCert,
     getByOrg,
@@ -140,5 +173,6 @@ module.exports = {
     recentUpdates,
     updStudyResource,
     createUser,
-    checkUser
+    loginUser,
+    postComment
 }
