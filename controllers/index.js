@@ -1,7 +1,8 @@
 const res = require("express/lib/response");
 const { Cert, Study, User, Comm } = require("../models");
 const bcrypt = require("bcrypt")
-const jwt = require("jsonwebtoken")
+const jwt = require("jsonwebtoken");
+
 
 
 //****************Certificate Searches*****************
@@ -188,8 +189,9 @@ const postComment = async (req, res) => {
 const getComments = async (req, res) => {
     try {
         const com = await Comm.find({ "cert" : req.params._id})
-        // const user = await User.findById({})
-            return res.status(200).json({ com })
+        console.log(com)
+        // const user = await User.findById(id)
+            return res.status(200).json({ com})
     } catch (error) {
         return res.status(500).send(error.message);
     }

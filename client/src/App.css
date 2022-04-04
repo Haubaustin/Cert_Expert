@@ -252,6 +252,22 @@ body {
   font-size: 22px;
 }
 
+.indivComment {
+  height: fit-content;
+  word-break: break-all;
+  margin-right: 10px;
+}
+
+.indivTable {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  text-align: center;
+}
+
+.indivUser {
+  margin-left: 10px;
+}
+
 .input {
   outline: none;
   border: none;
