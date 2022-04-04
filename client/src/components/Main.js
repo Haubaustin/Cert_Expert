@@ -23,7 +23,7 @@ const Main = () => {
                 <h3 className="subTitle">Recently Updated</h3>
                 <div className="updateDiv">
                 {data.map((recent) => (
-                        <div className="updateList">
+                        <div className="updateList" key={recent._id}>
                             <Link to={`/search/${recent.cert}`}>
                             Study Resource: {recent.displayName} 
                             <br></br>

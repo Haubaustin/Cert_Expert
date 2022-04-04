@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom"
 import Resources from "./Resources"
 import Newcomment from "./comments/Newcomment"
 
-const Certificatedetails = () => {
+const Certificatedetails = (props) => {
     const [cert, Setcert]=useState({})
     const { id } = useParams()
    
@@ -34,7 +34,7 @@ useEffect(()=> {
                 </div>
             <h2 className="Title">Comments</h2>
             <div className="comment">
-                <Newcomment />
+                <Newcomment  />
             </div>
         </div>
     )

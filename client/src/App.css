@@ -125,7 +125,7 @@ body {
 
 .commentAuthor {
   margin-top: 0;
-  margin-left: 10px;
+  margin-left: 20px;
 }
 
 .commentForm {
@@ -133,12 +133,13 @@ body {
 }
 
 .commentForm > div > button {
-  margin-left: 15px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .commentSection {
   font: inherit;
-  margin-left: 15px;
+  margin-left: 10px;
   width: calc(70%);
 }
 
@@ -212,6 +213,14 @@ body {
   background: linear-gradient(90deg, rgba(41,41,41,1) 0%, rgba(34,33,41,1) 48%, rgba(0,0,0,1) 100%);
 }
 
+.greeting {
+  top: 75px;
+  position: absolute;
+  right: 150px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
 .Header {
   height: 100px;
   border-bottom: 3px solid black;  
@@ -280,9 +289,9 @@ body {
 }
 
 .logout {
-  top: 72px;
+  top: 77px;
   position: absolute;
-  right: 65px;
+  right: 50px;
   border: none;
   background: none;
   font-size: 18px;
@@ -336,6 +345,11 @@ body {
   padding-top: 10px;
   padding-bottom: 10px;
 
+}
+
+.profilePic {
+  height: 35px;
+  border-radius: 10px;
 }
 
 .recList {

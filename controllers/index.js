@@ -165,16 +165,28 @@ const postComment = async (req, res) => {
     try {
         const id = req.params._id
         const comment = new Comm({
+            user: req.body.user,
             text: req.body.comment,
             cert: id,
         })
         await comment.save()
+        const user = await User.findById(req.body.user)
+        user.posts.push(comment)
+        await user.save()
         return res.status(200).json({ comment })
     } catch (error) {
         return res.status(500).send(error.message);
     }
 }
 
+const getComments = async (req, res) => {
+    try {
+        const com = await Comm.find({ "cert" : req.params._id})
+            return res.status(200).json({ com })
+    } catch (error) {
+        return res.status(500).send(error.message);
+    }
+}
 
 
 module.exports = {
@@ -190,5 +202,6 @@ module.exports = {
     createUser,
     loginUser,
     postComment,
-    verifyUser
+    verifyUser,
+    getComments
 }

@@ -22,7 +22,7 @@ const Login = () => {
         try {
         const {data: res} = await axios.post("http://localhost:3001/api/login", data)
             localStorage.setItem("jwt", res.data)
-            window.location = "/"    
+            window.location = "/"
         } catch (error) {
             console.log(error.response)
             console.log(error.response.status)

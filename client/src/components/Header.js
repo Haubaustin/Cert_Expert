@@ -53,7 +53,7 @@ const Header = (props) => {
                     onClick={handleLogout} 
                     hidden={login} 
                     className="logout">
-                        Logout
+                        | Logout |
                 </button>
                 
             </section>
