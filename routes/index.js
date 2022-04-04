@@ -14,6 +14,7 @@ router.get('/id/:_id', controllers.getId)
 router.get("/posts/:_id", controllers.getStudyResource)
 //Homepage get recent updates of study resources
 router.get("/new", controllers.recentUpdates)
+router.get("/checkuser/:id", controllers.verifyUser)
 //Update Study Resource
 router.post("/updatepost/:name", controllers.updStudyResource)
 //Login/Authorize Routes

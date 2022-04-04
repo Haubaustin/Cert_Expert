@@ -59,7 +59,7 @@ const handleSubmit = (e) => {
 }
 
 const handleDelete = async (e) => {
-    const alert = prompt("Are you sure you would like to delete? Type delete below to continue")
+    const alert = prompt("Are you sure you would like to delete this study resource?\r\nType 'delete' below to continue.")
         if (alert == "delete") {
     const name = e.target.name
     await axios.delete(`http://localhost:3001/api/post/${name}`, name)

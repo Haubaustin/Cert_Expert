@@ -142,17 +142,32 @@ const loginUser = async (req, res) => {
     }
 }
 
+const verifyUser = async (req, res) => {
+    try {
+        const token = req.params.id
+        jwt.verify(token, process.env.JWTPRIVATEKEY, (err, decoded) => {
+            if (err) {
+                res.send(err.message)
+            }
+            else {
+                res.send(decoded)
+            }
+        })
+    }
+    catch {
+
+    }
+}
+
 //****************Comment Section*****************
 //##################################################
 const postComment = async (req, res) => {
     try {
         const id = req.params._id
-        console.log(id)
         const comment = new Comm({
             text: req.body.comment,
             cert: id,
         })
-        console.log(comment)
         await comment.save()
         return res.status(200).json({ comment })
     } catch (error) {
@@ -174,5 +189,6 @@ module.exports = {
     updStudyResource,
     createUser,
     loginUser,
-    postComment
+    postComment,
+    verifyUser
 }

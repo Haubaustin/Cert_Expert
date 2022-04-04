@@ -11,10 +11,10 @@ const Header = (props) => {
     const [login, setLogin] = useState(true)
 
     useEffect(() => {
-        if (props.user) {
+        if (props.userName) {
             setLogin(false)
         }
-    }, [props.user])
+    }, [props.userName])
 
     const handleLogout = () => {
         localStorage.removeItem("jwt")
@@ -43,6 +43,11 @@ const Header = (props) => {
                         className='searchLink'>
                             Search
                     </Link>
+                </span>
+                <span
+                    className='greeting'
+                    hidden={login}>
+                    Hello, {props.userName}
                 </span>
                 <button 
                     onClick={handleLogout} 
