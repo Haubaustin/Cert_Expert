@@ -143,6 +143,10 @@ body {
   margin-right: auto;
 }
 
+.commentPic {
+  height: 25px;
+}
+
 .commentSection {
   font: inherit;
   margin-left: 10px;

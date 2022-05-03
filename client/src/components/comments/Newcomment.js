@@ -9,7 +9,6 @@ const Newcomment = () => {
     const [account, setAccount] = useState({})
     const { id } = useParams()
     const [data, setData] = useState({
-        userName: "",
         user: "",
         comment: "",
     })
@@ -27,7 +26,6 @@ const Newcomment = () => {
     const value = e.target.value
     setData({
         ...data,
-        userName: account.userName,
         user: account._id,
         comment: value
     })
