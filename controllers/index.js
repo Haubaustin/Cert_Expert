@@ -85,7 +85,6 @@ const delStudyResource = async (req, res) => {
 const recentUpdates = async (req,res) => {
     try {
         const recent = await Study.find({}).sort({createdAt: -1}).limit(3)
-            console.log(recent)
             return res.status(200).json({ recent })
     } catch (error) {
         return res.status(500).send(error.message);
@@ -94,8 +93,6 @@ const recentUpdates = async (req,res) => {
 
 const updStudyResource = async (req, res) => {
     try {
-        console.log(req.body.displayName)
-        console.log(req.params.name)
         const upd = await Study.findOneAndUpdate({displayName : req.params.name }, {displayName : req.body.displayName})
             upd.save()
             console.log(upd)
@@ -170,7 +167,6 @@ const postComment = async (req, res) => {
     try {
         const id = req.params._id
         const comment = new Comm({
-            userName: req.body.userName,
             user: req.body.user,
             text: req.body.comment,
             cert: id,
@@ -189,8 +185,8 @@ const postComment = async (req, res) => {
 const getComments = async (req, res) => {
     try {
         const com = await Comm.find({ "cert" : req.params._id})
+        .populate("user")
         console.log(com)
-        // const user = await User.findById(id)
             return res.status(200).json({ com})
     } catch (error) {
         return res.status(500).send(error.message);

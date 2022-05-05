@@ -1,6 +1,6 @@
-import axios from "axios"
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom"
+import Client from "../api/api.jsx"
 
 
 const Commentsection = () => {
@@ -13,7 +13,7 @@ useEffect(() => {
 }, [])
 
 const getComments = async () => {
-    const comment = await axios.get(`http://localhost:3001/api/comment/${id}`)
+    const comment = await Client.get(`/api/comment/${id}`)
     setData(comment.data.com)
     console.log(comment.data.com)
 }
@@ -26,13 +26,15 @@ const getComments = async () => {
             </select> */}
             {data.map((com)=> (
             <div key={com._id} className="indivTable">
+                <p>
+                    <img className="commentPic" src={com.user.profilePic}/>
+                </p>
                 <p className="indivUser">
-                <img className="commentPic" src={com.user.profilePic}/>
-                {com.user.userName} <br></br>
-                {com.createdAt.substring(0,10)}
+                    {com.user.userName} <br></br>
+                    {com.createdAt.substring(0,10)}
                 </p>
                 <p className="indivComment">
-                {com.text}
+                    {com.text}
                 </p>
             </div>
             ))}

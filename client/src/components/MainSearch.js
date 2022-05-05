@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Searchbar from "./Searchbar";
-import axios from "axios"
 import Dropdown from "./Dropdown";
 import Certificate from "./Certificate";
+import Client from "./api/api.jsx"
 
 
 const MainSearch = () => {
@@ -19,7 +19,7 @@ const MainSearch = () => {
     const findByName = async (e) => {
         setSearchBy(true)
         e.preventDefault()
-        const name = await axios.get(`http://localhost:3001/api/name/${searchName}`)
+        const name = await Client.get(`/api/name/${searchName}`)
         setNameResults(name.data.name)
     }
 
@@ -28,7 +28,7 @@ const MainSearch = () => {
         if (e.target.value === "") {
             return }
             else {
-        const org = await axios.get(`http://localhost:3001/api/org/${e.target.value}`)
+        const org = await Client.get(`/api/org/${e.target.value}`)
         setOrgName(org.data.organization)
     }
 }

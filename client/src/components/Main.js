@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import Client from "./api/api.jsx"
 
 const Main = () => {
     const [ data, setData] = useState([])
 
     useEffect(()=> {
         const getRecent = async () => {
-            const recentUp = await axios.get(`http://localhost:3001/api/new`)
+            const recentUp = await Client.get(`/api/new`)
             setData(recentUp.data.recent)
         }
         getRecent()

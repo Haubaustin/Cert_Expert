@@ -1,6 +1,6 @@
 import React, {  useState, useEffect } from "react"
 import {  useParams } from "react-router-dom"
-import axios from "axios"
+import Client from "../api/api.jsx"
 
 
 
@@ -18,7 +18,7 @@ const Newcomment = () => {
      }, [])
 
      const verify = async () => {
-        const whoami = await axios.get(`http://localhost:3001/api/checkuser/${token}`)
+        const whoami = await Client.get(`/api/checkuser/${token}`)
         setAccount(whoami.data)
     }
 
@@ -34,7 +34,7 @@ const Newcomment = () => {
 
     const handleSubmit = async (e) => {
         try {
-        await axios.post(`http://localhost:3001/api/comment/${id}`, data)
+        await Client.post(`/api/comment/${id}`, data)
         comment.value = ""
         }    
         catch (error) {

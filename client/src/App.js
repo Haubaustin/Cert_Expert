@@ -8,8 +8,8 @@ import { Route, Routes, Navigate } from 'react-router-dom';
 import Certificatedetails from './components/Certificatedetails';
 import Login from './components/login/Login';
 import Register from './components/login/Register';
-import React, { createContext, useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect, useState } from 'react';
+import Client from './components/api/api';
 
 
 function App() {
@@ -18,7 +18,7 @@ function App() {
 
   useEffect(()=> {
      const verify = async () => {
-     const whoami = await axios.get(`http://localhost:3001/api/checkuser/${user}`)
+     const whoami = await Client.get(`/api/checkuser/${user}`)
      console.log(whoami)
      setAccount(whoami.data)
     }

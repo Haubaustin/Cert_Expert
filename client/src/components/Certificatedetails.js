@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
-import axios from "axios"
 import { useParams } from "react-router-dom"
 import Resources from "./Resources"
 import Newcomment from "./comments/Newcomment"
 import Commentsection from "./comments/Commentsection"
+import Client from "./api/api.jsx"
 
 const Certificatedetails = (props) => {
     const [cert, Setcert]=useState({})
@@ -11,7 +11,7 @@ const Certificatedetails = (props) => {
    
 useEffect(()=> {
     const getCertResults = async () => {
-        const certs = await axios.get(`http://localhost:3001/api/id/${id}`)
+        const certs = await Client.get(`/api/id/${id}`)
         Setcert(certs.data.id[0])
     }
     getCertResults()

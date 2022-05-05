@@ -1,6 +1,6 @@
-import axios from "axios"
 import { useState, useEffect } from "react"
 import {  useParams } from "react-router-dom"
+import Client from "./api/api.jsx"
 
 
 const Resources = () => {
@@ -19,7 +19,7 @@ const Resources = () => {
 //***Global***
 
 const getStudyResults = async () => {
-    const study = await axios.get(`http://localhost:3001/api/posts/${id}`)
+    const study = await Client.get(`/api/posts/${id}`)
     setRec(study.data.rec)
 }
 
@@ -50,7 +50,7 @@ const handleSubmit = (e) => {
         displayName: data.displayName,
         url: data.url
     }
-    axios.post(`http://localhost:3001/api/post/${id}`, study)
+    Client.post(`/api/post/${id}`, study)
         .then((response) => {
         console.log(response.status)
         console.log(response.data)
@@ -62,7 +62,7 @@ const handleDelete = async (e) => {
     const alert = prompt("Are you sure you would like to delete this study resource?\r\nType 'delete' below to continue.")
         if (alert == "delete") {
     const name = e.target.name
-    await axios.delete(`http://localhost:3001/api/post/${name}`, name)
+    await Client.delete(`/post/${name}`, name)
         .then((response) => {
         console.log(response.status);
         console.log(response.data);
@@ -73,7 +73,7 @@ const handleDelete = async (e) => {
 
 const handleUpdate = async (e) => {
     const studyName = e.target.name
-        await axios.post(`http://localhost:3001/api/updatepost/${studyName}`, update)
+        await Client.post(`/api/updatepost/${studyName}`, update)
         .then((response) => {
         console.log(response.status);
         console.log(response.data);
